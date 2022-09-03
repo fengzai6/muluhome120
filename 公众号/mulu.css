@@ -107,7 +107,7 @@ li>span{
 
 .checkBox:checked + article .li
 {
-    max-height:100em;
+    max-height:150em;
     border-bottom-width:2px;
     transition: 2.5s ease;
     padding-bottom: 5px;
