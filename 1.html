@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="font item">软</div>
+        <div class="font item2">件</div>
+        <div class="font item3">分</div>
+        <div class="font item4">享</div>
+        <div class="font head">强</div>
+        <div class="font head2">强</div>
+        <div class="font head3">玩</div>
+        <div class="font head4">机</div>
+    </div>
+    <style>
+        :root{
+            --zhenxia: rgb(222,117,101);
+            --falan: rgb(48,174,207);
+        }
+        .content{
+            width: 100%;
+            height: 60px;
+            /* border: 1px solid rgb(93, 188, 244); */
+            box-shadow: inset 0px 0px 5px #7e7e7e;
+            border-radius: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+        .content::before{
+            content: "";
+            position: absolute;
+            background: linear-gradient(var(--zhenxia), var(--falan));
+            width: 100%;
+            height: 70%;
+            z-index: -2;
+            left: calc(50% - 10px);
+            top: calc(50% - 15px);
+            transform-origin: 10px 15px;
+            animation: zhuan 5s infinite linear;
+        }
+        .content::after{
+            content: "";
+            position: absolute;
+            width: calc(100% - 5px);
+            height: calc(100% - 5px);
+            background: #fafafa;
+            left: 2.5px;
+            top: 2.5px;
+            z-index: -1;
+            border-radius: 18px;
+        }
+        .font{
+            border-radius: 50%;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 10px;
+            text-align: center;
+            line-height: 40px;
+            font-family: 'STXingkai','kaiti';
+            font-size: 150%;
+            animation:show 5s infinite;
+            box-shadow: 0px 2px 4px #7e7e7e;
+        }
+        .head{
+            background-color: rgb(248, 213, 97);
+            
+            left: 25%;
+            animation: la1 5s infinite;
+
+        }
+        .head2{
+            background-color: rgb(248, 213, 97);
+            
+            left: 39%;
+            animation: la2 5s infinite;
+
+        }
+        .head3{
+            background-color: rgb(248, 213, 97);
+            
+            right: 39%;
+            animation: la3 5s infinite;
+
+        }
+        .head4{
+            background-color: rgb(248, 213, 97);
+            
+            right: 25%;
+            animation: la4 5s infinite;
+        }
+        .item{
+            background-color: rgb(20, 236, 233);
+           
+            left: 25%;
+            /* animation: la1 5s infinite; */
+        }
+        .item2{
+            background-color: rgb(20, 236, 233);
+           
+            left: 39%;
+            /* animation: la2 5s infinite; */
+
+        }
+        .item3{
+            background-color: rgb(20, 236, 233);
+            
+            right: 39%;
+            /* animation: la3 5s infinite; */
+
+        }
+        .item4{
+            background-color: rgb(20, 236, 233);
+           
+            right: 25%;
+            /* animation: la4 5s infinite; */
+
+        }
+        @keyframes show{
+            from{
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+                
+            }
+        }
+        @keyframes la1{
+            from{
+                opacity: .3;
+                left: 10%;
+            }
+            50%{
+                opacity: 1;
+                left: 25%;
+            }
+            70%{
+                opacity: 0;
+            }
+            to{
+                opacity: 0;
+                
+            }
+        }
+        @keyframes la2{
+            from{
+                opacity: .3;
+                left: 10%;
+            }
+            50%{
+                opacity: 1;
+                left: 39%;
+            }
+            70%{
+                opacity: 0;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+        @keyframes la3{
+            from{
+                opacity: .3;
+                right: 10%;
+            }
+            50%{
+                opacity: 1;
+                right: 39%;
+            }
+            70%{
+                opacity: 0;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+        @keyframes la4{
+            from{
+                opacity: .3;
+                right: 10%;
+            }
+            50%{
+                opacity: 1;
+                right: 25%;
+            }
+            70%{
+                opacity: 0;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+        @keyframes zhuan{
+            to{
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+</body>
+
+</html>
