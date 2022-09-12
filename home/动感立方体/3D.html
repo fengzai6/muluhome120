@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="rotateX">rotateX</div>
+    <div class="rotateY">rotateY
+        <h1>1111</h1>
+    </div>
+    <div class="rotateZ">rotateZ</div>
+    <div class="origin">change origin rotate</div>
+    <div class="scale">scale</div>
+</body>
+<style>
+    div{
+        width: 150px;
+        height: 100px;
+        position: relative;
+        float: left;
+        background-color: #ff0;
+        border: 1px red solid;
+        margin: 10px;
+        text-align: center;
+    }
+    .rotateX{
+        transform: rotateX(45deg);
+    }
+    .rotateY{
+        transform: rotateY(45deg);
+        /* transform-style: preserve-3d; */
+    }
+    .rotateZ{
+        transform: rotateZ(45deg);
+    }
+    .origin{
+        transform-origin: 0% 100%;
+        transform: rotate(45deg);
+    }
+    .scale{
+        transform: scaleX(50%);
+        perspective: 500;
+    }
+</style>
+</html>

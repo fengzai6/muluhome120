@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="play-ground">
+        <div class="ball"></div>
+    </div>
+</body>
+<style>
+    .play-ground{
+        width: 600px;
+        height: 340px;
+        border: 1px solid brown;
+        position: relative;
+    }
+    .ball{
+        background: rgb(13, 170, 243);
+        border-radius: 50%;
+        position: absolute;
+        animation: ball 5s infinite ;
+        /* 反向播放 */
+        animation-direction: alternate;       
+    }
+    .ball:hover{
+        animation-play-state: paused;
+    }
+    @keyframes ball {
+        from {
+            width: 50px;
+            height: 50px;
+            left: 30px;
+            top: 130px;
+        }
+        25% {
+            width: 30px;
+            height: 30px;
+            left: 130px;
+            top: 20px;
+            
+        }
+        45% {
+            width: 70px;
+            height: 70px;
+            left: 45%;
+            background: red;
+            bottom: 50%;
+        }
+        75% {
+            width: 120px;
+            height: 120px;
+            left: 360px;
+            top: 200px;
+        }
+        to {
+            width: 50px;
+            height: 50px;
+            left: 500px;
+            top: 20px;
+        }
+    }
+</style>
+</html>
