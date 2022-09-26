@@ -257,13 +257,18 @@
         <hr>
         <span id="tip">重要提示：</span>天翼云下载可以直接浏览器下载，不需要下载天翼云，需登录;<br>
         蓝奏云链接打不开可以改后缀,比如lanzouy→lanzoup,也就是换为x,y,p,v,z ;<br>
-        软件失效或者上面软件列表没有的可以私信公众号，看到会回复就应该会加，或者发邮箱至<span id="mail"><a href="https://mail.qq.com" target="_blank">l.wf6@qq.com</a></span>发需求或催更新哦
+        软件失效或者上面软件列表没有的可以私信公众号，看到会回复就应该会加，或者<div id="div2" style="display: none;">wxid_nvo8zxqtjxrl22</div>
+        <a class="copydiv" href="#" onclick="divCopy()">点我复制强强微信</a>发需求或催更新哦
         
         <p class="copy">Copyright &copy; 2022-present LiuXiaoJiang</p>
     </div>
 </body>
-<style name="tanchuang">
-    
+<style>
+    .copydiv{
+        text-decoration: none;
+        font-weight: bold;
+        color:#095abe;
+    }   
 </style>
 <script>
     function myFunction(){
@@ -283,5 +288,26 @@
     }
 
     document.getElementById("ctime").innerHTML = new Date().toDateString();
+
+    function divCopy() {
+            const div = document.getElementById("div2");
+            const input = document.createElement("input");
+            document.body.appendChild(input);
+            input.value = div.innerText;
+            input.select();
+            
+            try {
+                if (document.execCommand("copy", false)) {
+                    handleDomMsg("div 内容复制成功");
+                } else {
+                    handleDomMsg("div 内容复制失败");
+                }
+            } catch (error) {
+                console.log(error, "error")
+            } finally {
+                input.remove();
+            }
+            alert("微信已复制！")
+        };
 </script>
 </html>
