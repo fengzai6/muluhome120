@@ -29,10 +29,11 @@
             color: #095abe; font-weight: bold;" href="./jiaocheng.html">·移动联通电信·</a>查看</p>
         <p class="ps"><a href="https://mp.weixin.qq.com/s?__biz=Mzk0NDM3ODMyNA==&mid=2247484929&idx=3&sn=fa90294e7b02870206e902b85d23d9d4&chksm=c324debaf45357ace8e236b19568b5e356ba974c2a7a99e18fe25f05f1231da8888235c86173#rd" style="text-decoration: none;
             color: #095abe; font-weight: bold;">🎉纯原某田鞋子！价格实惠！点这还可便宜20！</a></p>
+        <p class="ps">10月更新：抖音、酷我、龙虾影视</p>
         <p class="ps"><strong>声明：</strong>软件皆为学习软件内部相关原理所用</p>
-        <p id="ctime" style="margin-left: 15px;"><span id="month"></span>月<span id="day"></span>日&nbsp;<span id="h"></span>:<span id="m"></span></p>
         <h2 style="margin: 5px;border-left: 4px solid rgb(78, 239, 9) ;">&nbsp软件目录<span id="mulu">(正在努力更新中...)</span></h2>
         <h3 style="margin: 5px;border-left: 4px solid rgb(189, 239, 9) ;">&nbsp以下目录点击即可展开</h3>
+        <p  style="margin-left: 15px;"><span id="month"></span>月<span id="day"></span>日&nbsp;<span id="h"></span>:<span id="m"></span></p>
         
         <fieldset class="content con1">
             <legend>Android</legend>
@@ -287,14 +288,15 @@
         y.style.display="none"
     }
 
-    function freshdate(){
-        document.getElementById("mouth").innerHTML = new Date().getMonth+1;
-        document.getElementById("day").innerHTML = new Date().getDate;
-        document.getElementById("h").innerHTML = new Date().getHours;
-        document.getElementById("m").innerHTML = new Date().getMinutes;
-    }
     freshdate();
-    setInterval(freshdate(),30000)
+    setInterval(freshdate,30000);
+    function freshdate(){
+        var newTime = new Date();
+        document.getElementById("month").innerText = newTime.getMonth()+1;
+        document.getElementById("day").innerHTML = newTime.getDate();
+        document.getElementById("h").innerHTML = newTime.getHours();
+        document.getElementById("m").innerHTML = newTime.getMinutes();
+    }
     
     function divCopy() {
             const div = document.getElementById("div2");
