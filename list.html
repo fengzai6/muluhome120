@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章一览</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <div class="head">
+        <iframe src="./1.html" frameborder="0" width="100%" scrolling="no" height=""></iframe>
+    </div>
+    <div class="content">
+        <a href="https://mp.weixin.qq.com/s?__biz=Mzk0NDM3ODMyNA==&mid=2247485232&idx=1&sn=ba2bee2158854ba547f125f58982aa17&chksm=c324df8bf453569de45ab577665a75217eef8f3590e89bb53386e28b2a3cd2ce31a319c14b11#rd" class="article">
+            <p>免拔卡！改地区！某音国际版V26.4.3</p><span class="time">10月5日</span>
+        </a>
+        <a href="https://mp.weixin.qq.com/s?__biz=Mzk0NDM3ODMyNA==&mid=2247485237&idx=1&sn=7f72f04e18a8f9be2ab7fee9ff93fdf9&chksm=c324df8ef4535698560bff3e9828061719a4e800ba49fbe754f063eed55c2b6ad136e14b64d4#rd" class="article">
+            <p>【教程】VScode里如何运行Java环境</p><span class="time">10月5日</span>
+        </a>
+        <a href="https://mp.weixin.qq.com/s?__biz=Mzk0NDM3ODMyNA==&mid=2247485238&idx=1&sn=9989085ec888703bc18414a147d90576&chksm=c324df8df453569bf0cef2f1b1e5fddd93d73fed6765f15419b92019ba5657b957b46299ff69#rd" class="article">
+            <p>不是学生也可以，支付宝免费认证学生特权方法</p><span class="time">10月5日</span>
+        </a>
+        <a href="https://mp.weixin.qq.com/s?__biz=Mzk0NDM3ODMyNA==&mid=2247485232&idx=2&sn=46a1804541c11433818b28817b7172bf&chksm=c324df8bf453569d4027cf88848435a5da6b9ef7cb257add46681feb121cec42b6a60c8d6012#rd" class="article">
+            <p>抖堷 v22.6 (沉浸式+无水印+去广告等等！）</p><span class="time">10月5日</span>
+        </a>
+        <a href="./index.html" class="article">
+            <p>回到主页</p><span class="time"></span>
+        </a>
+        
+    </div>
+    <div class="footer">
+        <p class="copyright">Copyright &copy; 2022-present 强强玩机</p>
+    </div>
+</body>
+<script>
+    var list = document.getElementsByClassName('article')
+    for(let i=list.length-1; i>-1; i--){
+        document.querySelector(".content").appendChild(list[i]);
+      }
+</script>
+</html>
