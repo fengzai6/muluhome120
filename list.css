@@ -38,7 +38,7 @@ body{
 }
 
 .article::before {
-    content: url(./images/头像\ 拷贝.png);
+    content: url(./images/fronticon.png);
     position: absolute;
     border-radius: 5px;
     top: 2px;
