@@ -22,12 +22,14 @@ function show(){
 
 function knock(){
     fish.style.transform='rotate(10deg) scale(70%)';
+    fish.style.webkitTransform='rotate(10deg) scale(70%)';
     var k = document.getElementById('knock');
     k.play();
     up();
     add();
     setTimeout(function(){
     fish.style.transform='rotate(3deg) scale(75%)';
+    fish.style.webkitTransform='rotate(3deg) scale(75%)';
     },100);
     if(ss>=9999){
         document.getElementById('foottext').style.display="block";
