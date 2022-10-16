@@ -78,8 +78,7 @@
     /* left: -15px; */
     /* margin-left: 15%; */
     /* transform-origin: 15% 50%; */
-    transform: rotate(3deg) scale(75%);
-    -webkit-transform: rotate(3deg) scale(75%);
+    transform: rotate(3deg);
     transition: 0.1s;
 }
 
