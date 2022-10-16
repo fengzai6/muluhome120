@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线木鱼</title>
+    <link rel="stylesheet" href="fish.css">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div id="setting">
+                <p style="display: inline-block;">每次功德:</p>
+                <select name="" id="setNum">
+                    <option value="1">1功德</option>
+                    <option value="0">0功德</option>
+                    <option value="6">6功德</option>
+                    <option value="88">88功德</option>
+                    <option value="666">666功德</option>
+                    <option value="∞" style="font-weight: bolder;">∞功德</option>
+                </select>
+                <button onclick="setNumber()" >点我修改</button>
+            </div>
+            <button class="set" onclick="show()" id="b1">设置</button>
+            <p class="sum" id="sumtext">本次功德量：<span id="sum">0</span></p>
+        </div>
+        <div class="content" onclick="knock()">
+            <div class="box">
+                <div><img id="fish" src="./FISH-WHITE.png" alt=""></div>
+                <p class="jia" id="text" style="animation:up 1s">+<span id="jia">1</span></p>
+            </div>
+            <audio src="./knock.wav" id="knock" ></audio>
+        </div>
+        <div class="footer">
+            <p id="foottext">施主现在是功德无量啊！功德无量啊！</p>
+        </div>
+    </div>
+</body>
+<script src="./fish.js"></script>
+</html>
