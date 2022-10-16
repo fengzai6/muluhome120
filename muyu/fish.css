@@ -60,7 +60,6 @@
 .sum{
     line-height: 60px;
 }
-
 .content{
     position: relative;
     /* text-align: center; */
@@ -72,15 +71,17 @@
 }
 .box{
     position: relative;
-    text-align: center;
+    text-align: center
 }
 #fish{
     /* position: absolute; */
     /* left: -15px; */
     /* margin-left: 15%; */
+    /* transform-origin: 15% 50%; */
     transform-origin: 25% 65%;
     width: 70%;
     transform: rotate(3deg);
+    /* -webkit-transform: rotate(3deg) scale(75%); */
     transition: 0.1s;
 }
 
@@ -90,8 +91,8 @@
     opacity: 0;
     font-weight: bold;
     position: absolute;
-    right: 10px;
-    top: 30px;
+    right: 30px;
+    top: 20px;
     transform: rotate(5deg);
     /* transition: 0.15s; */
     /* animation:up 1s; */
@@ -111,25 +112,25 @@
 }
 @keyframes up{
     0%{
-        top: 30px;
+        top: 20px;
         transform: rotate(8deg);
         opacity: 1;
     }
     to{
-        top: -10px;
+        top: -20px;
         transform: rotate(10deg) scale(120%);
         opacity: 0;
     }
 }
 @keyframes up2{
     0%{
-        right: 15px;
-        top: 30px;
+        right: 35px;
+        top: 20px;
         opacity: 1;
     }
     to{
         transform: rotate(8deg) scale(120%);
-        top: -10px;
+        top: -20px;
         opacity: 0;
     }
 }

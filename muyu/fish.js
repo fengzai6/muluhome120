@@ -46,9 +46,9 @@ function up(){
     // console.log(anima);
     switch(anima){
         case "1s ease 0s 1 normal none running up":
-            text.style.animation = "0.8s ease 0s 1 normal none running up2";
+            text.style.animation = "1.2s ease 0s 1 normal none running up2";
             break;
-        case "0.8s ease 0s 1 normal none running up2":
+        case "1.2s ease 0s 1 normal none running up2":
             text.style.animation = "1s ease 0s 1 normal none running up";
             break;
     }
