@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="waves.css">
+    
+</head>
+<body>
+    <div class="waves">
+        <!-- <div class="wave" style="--d1:1s;--d2:1s"></div> -->
+    </div>
+</body>
+<script>
+    var divBox = document.querySelector('.waves');
+    var a = -0.5;
+    var b = -3.5;
+    // divBox.innerHTML = `<div style="--d1:${a-0.5}s;--d2:${b-0.5}s"></div>`;
+    var i = 0;
+    var windowWidth = window.innerWidth;
+    var x = parseInt(windowWidth/40);
+    x = x*2;
+    console.log(x)
+    //创建32个wave
+    while(i<x){
+        i++;
+        let wave = document.createElement('div');
+        wave.style = `--d1:${a}s;--d2:${b}s`;
+        wave.className = 'wave'
+        // wave.textContent = i
+        a = a-0.5;
+        b = b-0.5;
+        divBox.appendChild(wave);
+    }
+</script>
+</html>

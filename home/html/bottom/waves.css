@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    /* background-color: rgb(0, 0, 0,0.5); */
+    overflow: hidden;
+}
+.waves{
+    display: flex;
+    /* 设置投影 */
+    filter: drop-shadow(80px 0 0 rgba(57, 141, 194, 0.5));
+    position: absolute;
+    bottom: 0;
+    left: -200px;
+    /* overflow: hidden; */
+
+    /* filter: drop-shadow(120px 0 0 rgba(57, 141, 194, 0.5)); */
+}
+.wave{
+    position: relative;
+    width: 40px;
+    height: 150px;
+    margin: 5px;
+    border-radius: 3px;
+    overflow: hidden;
+    /* border: rgb(0, 111, 181) 1px solid; */
+}
+.wave::before{
+    content: "";
+    width: 300%;
+    height: 100%;
+    background-color: rgb(45, 121, 201);
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 80%; */
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    /* 执行动画 时长 贝塞尔曲线 无限 轮回 */
+    animation: upDown 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate
+    ,wave 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+    /* 通过自定义函数给每个wave安排延迟 */
+    animation-delay: var(--d1),var(--d2);
+}
+.wave::after{
+    content: "";
+    width: 300%;
+    height: 100%;
+    background-color: rgb(93, 176, 227);
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 80%; */
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    z-index: -1;
+    /* 执行动画 时长 贝塞尔曲线 无限 轮回 */
+    animation: upDown2 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate
+    ,wave 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+    /* 通过自定义函数给每个wave安排延迟 */
+    animation-delay: var(--d1),var(--d2);
+}
+@media only screen and (max-width: 900px){
+    .wave{
+        height: 110px;
+    }
+}
+@keyframes upDown{
+    0%{
+        top: 80%;
+    }
+    to{
+        top: 40%;
+    }
+}
+@keyframes upDown2{
+    0%{
+        top: 75%;
+    }
+    to{
+        top: 30%;
+    }
+}
+@keyframes wave{
+    0%{
+        transform: rotateZ(-20deg);
+    }
+    to{
+        transform: rotateZ(20deg);
+    }
+}
