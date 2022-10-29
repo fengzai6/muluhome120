@@ -153,21 +153,139 @@ body{
 }
 .bubbles{
     position: relative;
+    display: flex;
+    justify-content: center;
     flex: 1;
 }
 .bubble{
     transition: all 500ms;
+    position: absolute;
 }
 pre{
     /* position: absolute; */
     background: #15141a;
-    width: 100%; 
+    width: 55%; 
     height: 100%;  
     color: #fff;
     opacity: 0;
     z-index: -1;
     transition: all 500ms;
 }
+/* 先把写代码的 pre 标签搞好试试 */
+pre {
+    color: #61ffca;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: JetBrains Mono;
+    box-sizing: border-box;
+    padding: 24px 16px;
+    margin-top: 0;
+    overflow-y: auto;
+    }
+
+/* 不太喜欢斜体，变正好了 */
+pre em {
+    font-style: normal;
+}
+
+/* 这不得来给代码颜色高亮下 */
+.selector, .selector .key {
+    color: #f694ff;
+}
+
+.key, .comment {
+    color: #edecee;
+}
+
+.value {
+    color: #ffca85;
+}
+
+/* 这个容器设置一下先 */
+/* .welcome-head{
+    text-align: center;
+    background-color: var(--front-color);
+    height:4rem;
+} */
+
+/* 为了更好的看到效果，把pre移到旁边来吧 */
+/* pre {
+    width: 55%;
+} */
+
+/* 先搞出4个气泡先 */
+/* .bubble{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(90deg,#6ab5b3,#3e75c1);
+    opacity: 0.8;
+} */
+
+/* 给字搞一下！放进气泡里 */
+/* .bubble{
+    line-height: 150px;
+    text-align: center;
+    font-size: 20px;
+    color: #0f1922;
+    font-family: 'SThupo';
+} */
+
+#welcome-box1{
+    left: 8%;
+    top: 80px;
+}
+#welcome-box2{
+    left: 8%;
+    top: 320px;
+}
+#welcome-box3{
+    right: 8%;
+    top: 80px;
+}
+#welcome-box4{
+    right: 8%;
+    top: 320px;
+}
+
+/* 给气泡来点影子吧 */
+/* .bubble{
+    box-shadow: inset -4px -5px 10px 8px rgba(57, 141, 157,0.9);
+    filter: drop-shadow(0px 5px 3px rgba(48, 83, 104,0.7));
+} */
+
+/* 现在加上动画效果让气泡生动起来！ */
+/* #welcome-box1{
+    animation: flying 2s infinite alternate ease-out,
+                big 2s infinite alternate linear;
+}
+#welcome-box2{
+    animation: flying 3s infinite alternate ease-out,
+    big2 3s infinite alternate linear;
+}
+#welcome-box3{
+    animation-duration: 2.5s;
+    animation: flying 2s infinite alternate ease-out,
+                big 2s infinite alternate linear;
+}
+#welcome-box4{
+    animation: flying 2.8s infinite alternate ease-out,
+    big2 2.8s infinite alternate linear;
+} */
+
+/* 好，就是这样，写好啦！
+* 感觉一般般，算了我还是太菜了！*/
+
+/* 好了，现在我要关掉这个界面啦 */
+
+pre{
+    /* opacity: 0; */
+    /* display:none; */
+}
+
+
+
 
 .aixin{
     position: absolute;
@@ -210,13 +328,13 @@ pre{
 /* 写点动画存一下！*/
 @keyframes flying{
     to{
-        top:180px;
+        transform:translateY(100px);
     }
 }
 @keyframes big{
-    0%{
+    /* 0%{
         transform: scale(95%);
-    }
+    } */
     100%{
         transform: scale(115%);
     }
