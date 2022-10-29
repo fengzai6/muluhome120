@@ -2,55 +2,23 @@
 let styles = `\
 pre{
     opacity: 1;
-    
 }
 /*
+* 啥玩意？半成品？
 * 这页面怎么啥都没呀，也没样式呢？
 * 别急，我现在写一下吧~
 */
 
-/* 先把写代码的 pre 标签搞好试试 */
-pre {
-    color: #61ffca;
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.4;
-    font-family: JetBrains Mono;
-    top: 0;
-    box-sizing: border-box;
-    padding: 24px 16px;
-    margin-top: 0;
-    overflow-y: auto;
-    }
-
-/* 不太喜欢斜体，变正好了 */
-pre em {
-    font-style: normal;
-}
-
-/* 这不得来给代码颜色高亮下 */
-.selector, .selector .key {
-    color: #f694ff;
-}
-
-.key, .comment {
-    color: #edecee;
-}
-
-.value {
-    color: #ffca85;
-}
-
-/* 这个容器设置一下先 */
+/* 上面这个容器设置一下先 */
 .welcome-head{
     text-align: center;
     background-color: var(--front-color);
     height:4rem;
 }
 
-/* 为了更好的看到效果，把pre移到旁边来吧 */
+/* 为了更好的看到效果，把pre缩小些 */
 pre {
-    width: 30%;
+    width: 35%;
 }
 
 /* 先搞出4个气泡先 */
@@ -59,8 +27,8 @@ pre {
     top: 150px;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
     background: linear-gradient(90deg,#6ab5b3,#3e75c1);
+    border-radius: 50%;
     opacity: 0.8;
 }
 
@@ -73,9 +41,45 @@ pre {
     font-family: 'SThupo';
 }
 
-/* 把他们分开一下咯 */
+/* 给气泡来点影子吧 */
+.bubble{
+    box-shadow: inset -4px -5px 10px 8px rgba(57, 141, 157,0.9);
+    filter: drop-shadow(0px 5px 3px rgba(48, 83, 104,0.7));
+}
+
+/* 现在加上动画效果让气泡生动起来！ */
+#welcome-box1{
+    animation: flying 2s infinite alternate ease-out,
+    big 2s infinite alternate linear;
+}
+#welcome-box2{
+    animation: flying 3s infinite alternate ease-out,
+    big2 3s infinite alternate linear;
+}
+#welcome-box3{
+    animation-duration: 2.5s;
+    animation: flying 2s infinite alternate ease-out,
+    big 2s infinite alternate linear;
+}
+#welcome-box4{
+    animation: flying 2.8s infinite alternate ease-out,
+    big2 2.8s infinite alternate linear;
+}
+
+/* 好，就是这样，写好啦！
+* 感觉一般般，其实还是我太菜了！*/
+
+/* 好了，现在我要关掉这个界面啦
+* 等等，气泡还有变化哦
+* 愿你每天快乐！！ */
+
+pre{
+    opacity: 0;
+    display:none;
+}
 #welcome-box1{
     left: 15%;
+    top: 160px;
 }
 #welcome-box2{
     left: 35%;
@@ -90,42 +94,11 @@ pre {
     top: 155px;
 }
 
-/* 给气泡来点影子吧 */
-.bubble{
-    box-shadow: inset -4px -5px 10px 8px rgba(57, 141, 157,0.9);
-    filter: drop-shadow(0px 5px 3px rgba(48, 83, 104,0.7));
-}
-
-/* 现在加上动画效果让气泡生动起来！ */
-.bubble{
-    animation: flying 2s infinite alternate ease-out,
-                big 2s infinite alternate linear;
-}
-
-/* 气泡弄点不一样的，区别一下？*/
-#welcome-box2{
-    animation: flying 3s infinite alternate ease-out,
-    big2 3s infinite alternate linear;
-}
-#welcome-box3{
-    animation-duration: 2.5s;
-}
-#welcome-box4{
-    animation: flying 2.8s infinite alternate ease-out,
-    big2 2.8s infinite alternate linear;
-}
-
-/* 好，就是这样，写好啦！
-* 感觉一般般，算了我还是太菜了！*/
-
-/* 好了，现在我要关掉这个界面啦 */
-
-pre{
-    opacity: 0;
-    display:none;
-}
-
 `;
+
+var speed = 40;
+// var delayTime = speed * (styles.length + 200);
+
 // 返回输入了的html
 const getStyleHtml = function () {
   return document.getElementById('style-text').innerHTML;
@@ -192,15 +165,29 @@ const writeStyles = function (message, index, interval) {
     },interval)
   }
 };
-//增加页面元素
-// document.getElementById('welcome-conntent').insertAdjacentHTML(
-//   'beforeend',
-//   `\<style id="style-tag"></style>
-//     <div class="welcome-box">
-//       <span class="github"><i><i></i></i></span>
-//    </div>
-//    <pre id="style-text"></pre>\
-// `,
-// );
+
 //输入的字 初始量0  写字速度
-writeStyles(styles, 0, 50);
+writeStyles(styles, 0, speed);
+//增加页面元素
+// setTimeout(function(){
+//     document.getElementById('style-tag').insertAdjacentHTML(
+//       'beforeend',
+//       `\#welcome-box1{
+//         left: 15%;
+//         top: 160px;
+//     }
+//     #welcome-box2{
+//         left: 35%;
+//         top: 155px;
+//     }
+//     #welcome-box3{
+//         right: 35%;
+//         top: 160px;
+//     }
+//     #welcome-box4{
+//         right: 15%;
+//         top: 155px;
+//     }\
+//     `,
+//     );
+// },delayTime);
