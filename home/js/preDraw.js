@@ -4,7 +4,7 @@ pre{
     opacity: 1;
 }
 /*
-* 啥玩意？半成品？
+* 啥玩意？半成品的页面？
 * 这页面怎么啥都没呀，也没样式呢？
 * 别急，我现在写一下吧~
 */
@@ -57,9 +57,8 @@ pre {
     big2 3s infinite alternate linear;
 }
 #welcome-box3{
-    animation-duration: 2.5s;
-    animation: flying 2s infinite alternate ease-out,
-    big 2s infinite alternate linear;
+    animation: flying 2.5s infinite alternate ease-out,
+    big 2.5s infinite alternate linear;
 }
 #welcome-box4{
     animation: flying 2.8s infinite alternate ease-out,
@@ -69,8 +68,8 @@ pre {
 /* 好，就是这样，写好啦！
 * 感觉一般般，其实还是我太菜了！*/
 
-/* 好了，现在我要关掉这个界面啦
-* 等等，气泡还有变化哦
+/* 好了，现在我要关掉这个界面咯
+* 等等，气泡还在变化
 * 愿你每天快乐！！ */
 
 pre{
