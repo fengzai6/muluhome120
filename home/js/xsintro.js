@@ -84,13 +84,17 @@ function musicPlay(playClass){
 var musicP2 = document.getElementById('musicpause2');
 //音乐开关的变化2
 function musicPlay2(playId){
-    musicNum = playId[2]
+    console.log(!audioes[musicNum].paused)
     if(!audioes[musicNum].paused){
+        musicNum = parseInt(playId[2]);
         playButton.className = "start";
         musicP.innerHTML = ` `;
         musicP2.innerHTML = ` `;
         audioes[musicNum].pause();
     } else{
+        audioes[musicNum].pause();
+        musicNum = parseInt(playId[2]);
+        console.log(typeof(musicNum))
         musicP2.innerHTML = `#${playId}{
         background: url(./images/music-pause2.svg);
         background-size: 100% 100%;
@@ -152,6 +156,7 @@ function musicNext(){
         case 0:
             audioes[musicNum].pause();
             musicNum = 1;
+            console.log(musicNum);
             audioes[musicNum].currentTime = 0;
             audioes[musicNum].play();
             break;
