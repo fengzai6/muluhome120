@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    /* background-image: url(https://m.360buyimg.com/babel/jfs/t1/92348/3/32106/46940/63615842Ec431dc16/67292d4756696b1f.png); */
+    background-size: cover;
+}
+.content{
+    width: 100%;
+    height: 100vh;
+    background: rgb(255, 255, 255,0.4);
+    backdrop-filter: blur(5px) saturate(80%);
+    overflow: hidden;
+}
+/* -----------第一个----------- */
+/* -----------第一个----------- */
+/* -----------第一个----------- */
+.con1{
+}
+
+#xs1{
+    position: absolute;
+    width: 25%;
+    height: auto;
+    bottom: 0;
+    left: 37.5%;
+    transform-style:preserve-3d ;
+    filter: drop-shadow(10px 0px 10px #2e2e2e);
+    animation: flying 1s forwards ease-in;
+    /* transform-origin: 30% calc(90vw); */
+    /* transition: 0.1s; */
+}
+#xs1-back{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    bottom: -50%;
+    right: 10%;
+    z-index: -2;
+    filter: blur(5px) saturate(80%);
+    opacity: 0.8;
+}
+.quan{
+    position: absolute;
+    bottom: -40%;
+    left: 20%;
+    width: 60%;
+    height: calc(60vw);
+    border-radius: 50% 50% 0 0;
+    background: linear-gradient(90deg,#c858aa6a,#6ab5b3);
+    box-shadow: inset 3px 3px 80px #6ab5b3;
+    z-index: -1;
+    transition: 0.5s;
+}
+.information{
+    display: flex;
+    justify-content: center;
+}
+#annivesary{
+    position: absolute;
+    width: 110%;
+    height: 40%;
+    top: 5%;
+    left: -10%;
+    animation: flying2 1s forwards ease-in;
+    /* filter: drop-shadow(0px 0px 5px #696969); */
+    /* margin-top: 13%; */
+}
+.lyric{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* right: 100%; */
+}
+.text{
+    width: 100%;
+    text-align: center;
+    /* white-space: nowrap; */
+    font-size: 25px;
+    line-height: 40px;
+    /* font-style: italic; */
+    color: #2c3e50;
+    /* transition: 1s; */
+    /* animation: sliding 10s infinite linear; */
+    animation-delay: var(--d);
+    animation-duration: var(--dr);
+}
+
+.t2{
+    font-size: 65px;
+    color: aqua;
+    animation: sliding2 10s infinite linear;
+
+}
+.t3{
+    font-size: 75px;
+    color: bisque;
+}
+.text em{
+    font-size: 30px;
+    line-height: 50px;
+}
+@keyframes sliding{
+    0%{
+        transform: translateY(0);
+    }
+    2.6%{
+        transform: translateY(0px);
+    }
+    9%{
+        transform: translateY(-320px);
+    }
+    12.3%{
+        transform: translateY(-480px);
+    }
+    14.2%{
+        transform: translateY(-520px);
+    }
+    15.5%{
+        transform: translateY(-600px);
+    }
+    19.7%{
+        transform: translateY(-800px);
+    }
+    23.6%{
+        transform: translateY(-920px);
+    }
+    27.5%{
+        transform: translateY(-1000px);
+    }
+    30.8%{
+        transform: translateY(-1040px);
+    }
+    34%{
+        transform: translateY(-1200px);
+    }
+    37.2%{
+        transform: translateY(-1280px);
+    }
+    40.4%{
+        transform: translateY(-1440px);
+    }
+    44.6%{
+        transform: translateY(-1560px);
+    }
+    47.3%{
+        transform: translateY(-1560px);
+    }
+    51.4%{
+        transform: translateY(-1760px);
+    }
+    54%{
+        transform: translateY(-1840px);
+    }
+    58.9%{
+        transform: translateY(-1960px);
+    }
+    62.1%{
+        transform: translateY(-2000px);
+    }
+    65.7%{
+        transform: translateY(-2160px);
+    }
+    68.9%{
+        transform: translateY(-2240px);
+    }
+    72.5%{
+        transform: translateY(-2400px);
+    }
+    74.1%{
+        transform: translateY(-2440px);
+    }
+    77.3%{
+        transform: translateY(-2480px);
+    }
+    80.9%{
+        transform: translateY(-2640px);
+    }
+    84.1%{
+        transform: translateY(-2720px);
+    }
+    87.4%{
+        transform: translateY(-2880px);
+    }
+    89%{
+        transform: translateY(-2920px);
+    }
+    90%{
+        transform: translateY(-2960px);
+    }
+    93.2%{
+        transform: translateY(-3000px);
+    }
+    to{
+        transform: translateY(calc(-1950px - 100%));
+    }
+}
+@keyframes sliding2{
+    0%{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(200%);
+    }
+}
+
+
+/* ---------------第二个----------------- */
+/* ---------------第二个----------------- */
+/* ---------------第二个----------------- */
+.quan2{
+    position: absolute;
+    overflow: hidden;
+    top: -40%;
+    left: 20%;
+    width: 60%;
+    height: calc(60vw);
+    border-radius: 0 0 50% 50%;
+    background: linear-gradient(90deg,#c858aa6a,#6ab5b3);
+    box-shadow: inset 3px 3px 80px #6ab5b3;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+/* --------歌曲气泡的设置---------- */
+.music{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgb(163, 109, 109);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset -3px -3px 10px 5px #59647eb4;
+    animation: big 0.5s infinite alternate;
+}
+.music p{
+    color: aliceblue;
+}
+.music span{
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    filter: blur();
+    border-radius: 50%;
+    opacity: 0.8;
+    background: url(../images/music-play2.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#m1{
+    background-image: url(../images/music-bg1.jpg);
+    background-size: cover;
+    left: 30%;
+    top: 25%;
+}
+#m2{
+    background-image: url(../images/music-bg2.jpg);
+    background-size: cover;
+    left: 60%;
+    top: 25%;
+}
+#m3{
+    background-image: url(../images/music-bg3.jpg);
+    background-size: cover;
+    left: 45%;
+    top: 50%;
+}
+@keyframes big{
+    /* 0%{
+        transform: scale(95%);
+    } */
+    100%{
+        transform: scale(115%);
+    }
+}
+.play{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    background-color: #2c3e50c2;
+    z-index: 1;
+    top: calc(100% + 10px);
+    height: 10%;
+    width: 16%;
+    left: 42%;
+    border-radius: 100px;
+    transition: 1s;
+    box-shadow: 0 0 10px 5px #2c3e50c2;
+    /* padding: 0 20px; */
+}
+
+.play div{
+    border-radius: 10px;
+    background-color: rgb(245, 231, 220);
+}
+.play div span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.last{
+    margin-left: 15%;
+    width: 10%;
+    height: 40%;
+}
+.last span{
+    background: url(../images/music-last.svg);
+    background-size: 100% 100%;
+}
+#playB{
+    width: 15%;
+    height: 50%;
+    border-radius: 50px;
+}
+.start span{
+    background: url(../images/music-play.svg);
+    background-size: 100% 100%;
+}
+.next{
+    margin-right: 15%;
+    width: 10%;
+    height: 40%;
+}
+.next span{
+    background: url(../images/music-next.svg);
+    background-size: 100% 100%;
+}
+.sound{
+    position: absolute;
+    right: 22px;
+    top: calc(100% + 37px);
+    z-index: 1;
+}
+.sound button{
+    display: block;
+    position: relative;
+    width: 43px;
+    height: 27px;
+    box-shadow: inset 0px 0px 5px 3px #555b68b4;
+    background-color: rgb(90, 120, 121);
+    border: 0px;
+    border-radius: 15px;
+}
+.sound button span{
+    display: block;
+    position: absolute;
+    left: 4px;
+    top: 0;
+    bottom: 0;
+    width: 19px;
+    height: 19px;
+    margin: auto;
+}
+.offon span{
+    background: url(../images/sound-on.svg);
+    background-size: 100% 100%;
+    animation: sound-on linear 0.12s forwards;
+}
+@keyframes sound-on{
+    to{
+        transform: translateX(16px);
+    }
+}
+@keyframes sound-off{
+    0%{
+        transform: translateX(16px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+#xs2{
+    position: absolute;
+    bottom: -20%;
+    height: 70%;
+    opacity: 0;
+}
+.animationPlay{
+    animation: flying 1s forwards linear;
+}
+@keyframes flying{
+    0%{
+        opacity: 0.6;
+        bottom: -20%;
+    }
+    100%{
+        opacity: 1;
+        bottom: -3%;
+    }
+}
+#xs3{
+    position: absolute;
+    bottom: 0%;
+    height: 80%;
+    right: 10%;
+}
+@keyframes flying2{
+    0%{
+        left: -20%;
+        top: -30%;
+        height: 0;
+    }
+    100%{
+        left: -10%;
+        top: 5%;
+        height: 40%;
+    }
+}
+

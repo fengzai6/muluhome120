@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/xsintro.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="content con1" id="con1">
+            <div class="quan">
+                <img src="./images/15th.png" id="annivesary">
+            </div>
+            <div class="information">
+            </div>
+            
+            <img src="./images/XSpic1.png" id="xs1-back"></img>
+            <img src="./images/XSpic1.png" id="xs1"></img>
+        </div>
+        <div class="play">
+            <div class="last" onclick="musicLast()"><span></span></div>
+            <div class="start" id="playB" onclick="musicPlay(this.className)"><span></span></div>
+            <div class="next" onclick="musicNext()"><span></span></div>
+        </div>
+        <div class="sound">
+            <button class="offon" id="soundB" onclick="soundSet(this.className)"><span></span></button>
+        </div>
+        <div class="content con2">
+            <div class="quan2">
+                <div class="lyric">
+                    <p class="text t1" style="--d:0.5s; --dr:14s;">
+                        <em>粉色信笺 - 许嵩<br></em>
+                        词：许嵩<br>
+                        曲：许嵩<br>
+                        粉色的信笺<br>
+                        盛满我的思念<br>
+                        风掠过的瞬间<br>
+                        一转眼就不见<br>
+                        粉色的信笺<br>
+                        盛满我的思念<br>
+                        风掠过的瞬间<br>
+                        一转眼<br>
+                        一个人<br>
+                        冰又凉的季节<br>
+                        冷色的世界<br>
+                        倒带的画面<br>
+                        偷偷走进遇见你的时间<br>
+                        在心底举行一场纪念<br>
+                        啦啦~~<br>
+                        这世界<br>
+                        纷纷扰扰流言<br>
+                        烦恼和快乐<br>
+                        各自在堆叠<br>
+                        和你远行去海边<br>
+                        暗喜你浅浅酒窝浮现<br>
+                        潮起潮落是我指使的表演<br>
+                        有些话不敢对你讲<br>
+                        又担心错过会遗憾<br>
+                        忽然间天空飘起了小雪<br>
+                        有勇气给你写留言<br>
+                        粉色的信笺<br>
+                        盛满我的思念<br>
+                        风掠过的瞬间<br>
+                        一转眼就不见<br>
+                        飘洋过海陪伴在你身边<br>
+                        贴着你粉红的笑脸<br>
+                        粉色的信笺<br>
+                        盛满我的思念<br>
+                        雪落掌心里面<br>
+                        一转眼化成线<br>
+                        不知不觉爱你已一百天<br>
+                        好想延续到永远<br>
+                        啦啦~~<br>
+                        这世界<br>
+                        纷纷扰扰流言<br>
+                        烦恼和快乐<br>
+                        各自在堆叠<br>
+                        和你远行去海边<br>
+                        暗喜你浅浅酒窝浮现<br>
+                        潮起潮落是我指使的表演<br>
+                        有些话不敢对你讲<br>
+                        又担心错过会遗憾<br>
+                        忽然间天空飘起了小雪<br>
+                        有勇气给你写留言<br>
+                        粉色的信笺<br>
+                        盛满我的思念<br>
+                        风掠过的瞬间<br>
+                        一转眼就不见<br>
+                        飘洋过海陪伴在你身边<br>
+                        贴着你粉红的笑脸<br>
+                        粉色的信笺<br>
+                        盛满我的思念<br>
+                        雪落掌心里面<br>
+                        一转眼化成线<br>
+                        不知不觉爱你已一百天<br>
+                        好想延续到永远<br>
+                        粉色的信笺<br>
+                        盛满我的思念<br>
+                        风掠过的瞬间<br>
+                        一转眼就不见<br>
+                        飘洋过海陪伴在你身边<br>
+                        贴着你粉红的笑脸<br>
+                        粉色的信笺<br>
+                        盛满我的思念<br>
+                        雪落掌心里面<br>
+                        一转眼化成线<br>
+                        不知不觉爱你已一百天<br>
+                        好想延续到<br>
+                        好想延续到永远
+                    </p>
+                    <!-- <p class="text t2" style="--d:1.5s; --dr:13s;">~这一如你和我的相遇 像在深海里开启了香槟</p>
+                    <p class="text t3" style="--d:2s; --dr:12s;">~~~~~~这一如你和我的相遇 像在深海里开启了香槟</p> -->
+                </div>
+            </div>
+            
+            <div class="music" id="m1">
+                <audio src="./audio/许嵩 - 粉色信笺.mp3"></audio>
+                <p>-粉色信笺-</p>
+                <span id="of0" onclick="musicPlay2(this.id)"></span>
+            </div>
+            <div class="music" id="m2">
+                <audio src="./audio/许嵩 - 断桥残雪.mp3"></audio>
+                <p>-断桥残雪-</p>
+                <span id="of1" onclick="musicPlay2(this.id)"></span>
+            </div>
+            <div class="music" id="m3">
+                <audio src="./audio/许嵩 - 我想牵着你的手.mp3"></audio>
+                <p>-我想牵着你的手-</p>
+                <span id="of2" onclick="musicPlay2(this.id)"></span>
+            </div>
+            <img src="./images/XSpic2.png" id="xs2">
+            <img src="./images/XSpic3.png" id="xs3">
+        </div>
+    </div>
+</body>
+<style id="style-tag"></style>
+<style id="soundOn"></style>
+<style id="musicpause"></style>
+<style id="musicpause2"></style>
+<script src="./js/xsintro.js"></script>
+</html>

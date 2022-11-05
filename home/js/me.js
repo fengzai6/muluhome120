@@ -26,8 +26,8 @@ function openBox() {
     var change = document.getElementById(htmlItem);
     // 改类名为我们要的类名
     change.setAttribute("class", "right-box2");
-
-
+    //刷新框架
+    change.childNodes[1].contentWindow.location.reload(true);
 }
 
 //外面点击，里面的选择全关
@@ -58,30 +58,58 @@ function checkd() {
     divFather.firstElementChild.checked = true;
     // 改类名为我们要的类名
     change.setAttribute("class", "right-box2");
+    //刷新框架
+    change.childNodes[1].contentWindow.location.reload(true);
     //关闭起始页
     document.getElementById("welcome").style.display = "none";
 }
 
-// // 点击欢迎页的box时跳转到指向页面
-// var welcomeBoxs = document.getElementsByClassName("bubble");
-// for (var i in welcomeBoxs) {
-//     welcomeBoxs[i].onclick = boxOpen;
-// }
-// function boxOpen() {
-//     // 得到绑定目标id
-//     var inputId = this.getAttribute("with");
-//     // 获取绑定目标
-//     var inputItem = document.getElementById(inputId);
-//     // 打开列表
-//     inputItem.checked = true;
-//     // 找到关键字，并找到指向元素
-//     var htmlItem = inputItem.getAttribute("with");
-//     var change = document.getElementById(htmlItem);
-//     //选择第一个选项
-//     var divFather = document.getElementsByClassName(htmlItem)[0];
-//     divFather.firstElementChild.checked = true;
-//     // 改类名为我们要的类名
-//     change.setAttribute("class", "right-box2");
-//     //关闭起始页
-//     document.getElementById("welcome").style.display = "none";
-// }
+// 点击欢迎页的box时跳转到指向页面
+var welcomeBoxs = document.getElementsByClassName("bubble");
+for (var i in welcomeBoxs) {
+    welcomeBoxs[i].onclick = boxOpen;
+}
+function boxOpen() {
+    // 得到绑定目标id
+    var inputId = this.getAttribute("with");
+    // 获取绑定目标
+    var inputItem = document.getElementById(inputId);
+    // 打开列表
+    inputItem.checked = true;
+    // 找到关键字，并找到指向元素
+    var htmlItem = inputItem.getAttribute("with");
+    var change = document.getElementById(htmlItem);
+    //选择第一个选项
+    var divFather = document.getElementsByClassName(htmlItem)[0];
+    divFather.firstElementChild.checked = true;
+    // 改类名为我们要的类名
+    change.setAttribute("class", "right-box2");
+    //刷新框架
+    change.childNodes[1].contentWindow.location.reload(true);
+    //关闭起始页
+    document.getElementById("welcome").style.display = "none";
+}
+
+//点击欢迎页时显示欢迎页，关闭所选按钮
+function displayWelcome(){
+    document.getElementById("welcome").style.display = "flex";
+    var unchecks = document.getElementsByClassName("left-checkbox");
+    for (var j = 0; j < unchecks.length; j++) {
+        unchecks[j].checked = false
+    }
+    var htmlHetght = document.getElementsByClassName("right-box2");
+    for (var i = 0; i < htmlHetght.length; i++) {
+        htmlHetght[i].setAttribute("class", "right-box");
+    }
+}
+
+//打开菜单，关闭菜单
+var leftBar = document.querySelector(".left");
+function openMenu(){
+    leftBar.style = "top: 3.6rem; left: 0px;"
+}
+function closeMenu(){
+    leftBar.style = "top: 1.6rem; left: -300px;"
+}
+document.querySelector('.right').addEventListener('mouseover',closeMenu);
+document.querySelector('.empty3').addEventListener('mouseover',openMenu);

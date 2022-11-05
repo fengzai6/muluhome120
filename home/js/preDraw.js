@@ -4,17 +4,10 @@ pre{
     opacity: 1;
 }
 /*
-* 啥玩意？半成品的页面？
+* 什么？这是半成品嘛？
 * 这页面怎么啥都没呀，也没样式呢？
 * 别急，我现在写一下吧~
 */
-
-/* 上面这个容器设置一下先 */
-.welcome-head{
-    text-align: center;
-    background-color: var(--front-color);
-    height:4rem;
-}
 
 /* 为了更好的看到效果，把pre缩小些 */
 pre {
@@ -27,7 +20,7 @@ pre {
     top: 150px;
     width: 150px;
     height: 150px;
-    background: linear-gradient(90deg,#6ab5b3,#3e75c1);
+    background: linear-gradient(90deg,#c858aa6a,#6ab5b3);
     border-radius: 50%;
     opacity: 0.8;
 }
@@ -41,35 +34,44 @@ pre {
     font-family: 'SThupo';
 }
 
-/* 给气泡来点影子吧 */
+/* 给气泡来点阴影吧 */
 .bubble{
-    box-shadow: inset -4px -5px 10px 8px rgba(57, 141, 157,0.9);
-    filter: drop-shadow(0px 5px 3px rgba(48, 83, 104,0.7));
+    box-shadow: inset -4px -5px 10px 8px rgba(57, 141, 157,0.5),
+    2px 3px 5px rgba(48, 83, 104,0.7);
 }
 
 /* 现在加上动画效果让气泡生动起来！ */
+:root{
+    --abc: infinite alternate;
+}
 #welcome-box1{
-    animation: flying 2s infinite alternate ease-out,
-    big 2s infinite alternate linear;
+    animation: flying 2s var(--abc) ease-out,
+    big 2s var(--abc) linear;
 }
 #welcome-box2{
-    animation: flying 3s infinite alternate ease-out,
-    big2 3s infinite alternate linear;
+    animation: flying 3s var(--abc) ease-out,
+    big2 3s var(--abc) linear;
 }
 #welcome-box3{
-    animation: flying 2.5s infinite alternate ease-out,
-    big 2.5s infinite alternate linear;
+    animation-duration: 2.5s;
+    animation: flying 2s var(--abc) ease-out,
+    big 2s var(--abc) linear;
 }
 #welcome-box4{
-    animation: flying 2.8s infinite alternate ease-out,
-    big2 2.8s infinite alternate linear;
+    animation: flying 2.8s var(--abc) ease-out,
+    big2 2.8s var(--abc) linear;
+}
+
+/* 多加点飘落的爱心吧~*/
+.aixin{
+    --loveColor:rgb(201, 44, 117);
 }
 
 /* 好，就是这样，写好啦！
 * 感觉一般般，其实还是我太菜了！*/
 
-/* 好了，现在我要关掉这个界面咯
-* 等等，气泡还在变化
+/* 好了，现在我要关掉这个界面啦
+* 等等，气泡还有变化哦
 * 愿你每天快乐！！ */
 
 pre{
@@ -167,6 +169,7 @@ const writeStyles = function (message, index, interval) {
 
 //输入的字 初始量0  写字速度
 writeStyles(styles, 0, speed);
+
 //增加页面元素
 // setTimeout(function(){
 //     document.getElementById('style-tag').insertAdjacentHTML(

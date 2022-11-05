@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/me.css">
+</head>
+
+<body>
+    <div id="canvases">
+        <canvas id="bg"></canvas>
+    </div>
+    <div id="app">
+        <div class="header">
+            <div class="sidebar-top">
+                <div class="top-menu" onclick="openMenu()"></div>
+                <div class="sidebar-top-title">
+                    <p class="top-title" onclick="window.open('./index.html','_self')">主页</p>
+                </div>
+                <div class="empty1"></div>
+                <div class="sidebar-top-right">
+                    <p>📚学历信息</p>
+                    <div class="sidebar-content">
+                        <p class="school">顺德职业技术学院</p>
+                        <p>班级：21软件技术1班</p>
+                        <p>学号：21005354</p>
+                    </div>
+                </div>
+                <div class="sidebar-top-right">
+                    <p class="contact">📞联系方式</p>
+                    <div class="sidebar-content">
+                        手机：15694029730
+                        <br>邮箱：1791187302@qq.com
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="main">
+            <div class="empty2"></div>
+            <div class="main-box">
+                <div class="empty3">
+                    <div class="left">
+                        <button type="button" class="left-label" id="welcomeHtml" onclick="displayWelcome()">欢迎页</button>
+
+                        <input name="left" with="htmla1" type="radio" id="left-box1" class="left-checkbox"  hidden>
+                        <div class="left-box">
+                            <label class="left-label" for="left-box1">
+                                个人展示
+                            </label>
+                            <div class="htmla1">
+                                <input type="radio" name="list1" with="htmla1" id="csslist-a1" class="csslist" checked="true" hidden>
+                                <label for="csslist-a1" class="left-list">网页1</label>
+                                
+                                <input type="radio" name="list1" with="htmla2" id="csslist-a2" class="csslist" hidden>
+                                <label for="csslist-a2" class="left-list">网页2</label>
+                                
+                                <input type="radio" name="list1" with="htmla3" id="csslist-a3" class="csslist" hidden>
+                                <label for="csslist-a3" class="left-list">网页3</label>
+                            </div>
+                        </div>
+        
+                        <input name="left" with="htmlb1" type="radio" id="left-box2" class="left-checkbox" hidden >
+                        <div class="left-box">
+                            <label class="left-label" for="left-box2" >
+                                往期作业
+                            </label>
+                            <div class="htmlb1">
+                                <input type="radio" name="list2" with="htmlb1" id="csslist-b1" class="csslist" hidden>
+                                <label for="csslist-b1" class="left-list">网页1</label>
+                                
+                                <input type="radio" name="list2" with="htmlb2" id="csslist-b2" class="csslist" hidden>
+                                <label for="csslist-b2" class="left-list">网页2</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="empty4"></div> -->
+                <div class="right">
+                    <div id="welcome">
+                        <div class="welcome-head">
+                            <h1>
+                                <span class="shine">欢</span> <span class="shine">迎</span> <span class="shine">来</span> <span class="shine">到</span> <span class="shine">我</span> <span class="shine">的</span> <span class="shine">主</span> <span class="shine">页</span>
+                            </h1>
+                            <p>点击气泡以便开始</p>
+                        </div>
+                        <div id="welcome-content">
+                            <div class="bubbles">
+                                <pre id="style-text" scrolling="no"></pre>
+                                <div class="bubble" id="welcome-box1" with="left-box1">我的小世界</div>
+                                <div class="bubble" id="welcome-box2" with="left-box2">啊吧啊吧</div>
+                                <div class="bubble" id="welcome-box3" with="left-box3">软件教程</div>
+                                <div class="bubble" id="welcome-box4" with="left-box4">啊吧啊吧</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="love">
+                        <div class="aixin" id="a1"></div><div class="aixin" id="a2"></div><div class="aixin" id="a3"></div><div class="aixin" id="a4"></div><div class="aixin" id="a5"></div><div class="aixin" id="a6"></div><div class="aixin" id="a7"></div><div class="aixin" id="a8"></div><div class="aixin" id="a9"></div><div class="aixin" id="a10"></div>
+                    </div>
+
+                    <div class="right-box" id="htmla1">
+                        <iframe class="ifra" src="./xsintro.html" frameborder="0" width="100%" ></iframe>
+                    </div>
+                    <div class="right-box" id="htmla2">
+                        <iframe class="ifra" src="./pictures.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+                    </div>
+                    <div class="right-box" id="htmla3">
+                        <iframe class="ifra" src="./动感立方体/cube.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+                    </div>
+                    <div class="right-box" id="htmlb1">
+                        <iframe class="ifra" src="./动感立方体/3D.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+                    </div>
+                    <div class="right-box" id="htmlb2">
+                        <iframe class="ifra" src="./动感立方体/animation.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+                    </div>
+                    <!-- 未做！搞个页面，出场时来个灰度滤镜，从左到右展开 -->
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <!-- <iframe id="waves" src="./html/bottom/waves.html" frameborder="0" width="100%" frameborder="0" scrolling="no" ></iframe> -->
+            <!-- <div>aaa</div> -->
+        </div>
+    </div>
+</body>
+<style id="style-tag"></style>
+<script src="./js/bg.js"></script>
+<script src="./js/me.js"></script>
+<script src="./js/preDraw.js"></script>
+</html>
