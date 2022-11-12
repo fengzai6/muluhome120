@@ -87,11 +87,12 @@
 .frontOpen div span{
     position: absolute;
     top: 40%;
+    color: #2c3e50;
     font-size: 4rem;
     font-style: italic;
     margin: 15px;
     font-weight: bolder;
-    text-shadow: 0px 5px 5px #152a41;
+    text-shadow: 0px 5px 5px #152a41b2;
 }
 #fr1{
     background: linear-gradient(90deg,#b181a53d,#2c3e5047);
