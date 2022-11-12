@@ -63,7 +63,7 @@ function musicPlay(playClass){
                 background: url(./images/music-pause.svg);
                 background-size: 100% 100%;
             }`;
-            styles.insertAdjacentHTML('beforeend',`.t1{
+            styles.insertAdjacentHTML('beforeend',`#t1{
                 animation-play-state: running;
             }`)
             audioes[musicNum].play();
@@ -72,7 +72,7 @@ function musicPlay(playClass){
             playButton.className = "start";
             musicP.innerHTML = ` `;
             musicP2.innerHTML = ` `;
-            styles.insertAdjacentHTML('beforeend',`.t1{
+            styles.insertAdjacentHTML('beforeend',`#t1{
                 animation-play-state: paused;
             }`)
             audioes[musicNum].pause();
@@ -92,9 +92,7 @@ function musicPlay2(playId){
         musicP2.innerHTML = ` `;
         audioes[musicNum].pause();
     } else{
-        audioes[musicNum].pause();
         musicNum = parseInt(playId[2]);
-        console.log(typeof(musicNum))
         musicP2.innerHTML = `#${playId}{
         background: url(./images/music-pause2.svg);
         background-size: 100% 100%;
@@ -107,7 +105,8 @@ function musicPlay2(playId){
         audioes[musicNum].play();
     }
 }
-
+//获取歌曲前置样式元素
+var frontStyle = document.getElementById('whoFront');
 //当前歌曲序号
 var musicNum = 0;
 //切换上一首
@@ -120,17 +119,52 @@ function musicLast(){
     switch (musicNum){
         case 0:
             audioes[musicNum].pause();
+            document.getElementById('t1').className = 'text';
+            frontStyle.innerHTML= `#m3{
+                z-index: 1;}
+                #t1{
+                    display: none;
+                }
+                #t2{
+                    display: none;
+                }
+                #t3{
+                    display: block;
+                }`;
             musicNum = 2;
             audioes[musicNum].currentTime = 0;
             audioes[musicNum].play();
             break;
         case 1:
+            document.getElementById('t1').className = 'text t1';
+            frontStyle.innerHTML= `#m1{
+                z-index: 1;}
+                #t1{
+                    display: block;
+                }
+                #t2{
+                    display: none;
+                }
+                #t3{
+                    display: none;
+                }`;
             musicNum = 0;
             audioes[musicNum].currentTime = 0;
             audioes[1].pause();
             audioes[musicNum].play();
             break;
         case 2:
+            frontStyle.innerHTML= `#m2{
+                z-index: 1;}
+                #t1{
+                    display: none;
+                }
+                #t2{
+                    display: block;
+                }
+                #t3{
+                    display: none;
+                }`;
             musicNum = 1;
             audioes[2].pause();
             audioes[musicNum].currentTime = 0;
@@ -154,6 +188,18 @@ function musicNext(){
             }`;
     switch (musicNum){
         case 0:
+            document.getElementById('t1').className = 'text';
+            frontStyle.innerHTML= `#m2{
+                z-index: 1;}
+                #t1{
+                    display: none;
+                }
+                #t2{
+                    display: block;
+                }
+                #t3{
+                    display: none;
+                }`;
             audioes[musicNum].pause();
             musicNum = 1;
             console.log(musicNum);
@@ -161,12 +207,35 @@ function musicNext(){
             audioes[musicNum].play();
             break;
         case 1:
+            frontStyle.innerHTML= `#m3{
+                z-index: 1;}
+                #t1{
+                    display: none;
+                }
+                #t2{
+                    display: none;
+                }
+                #t3{
+                    display: block;
+                }`;
             musicNum = 2;
             audioes[musicNum].currentTime = 0;
             audioes[1].pause();
             audioes[musicNum].play();
             break;
         case 2:
+            document.getElementById('t1').className = 'text t1';
+            frontStyle.innerHTML= `#m1{
+                z-index: 1;}
+                #t1{
+                    display: block;
+                }
+                #t2{
+                    display: none;
+                }
+                #t3{
+                    display: none;
+                }`;
             musicNum = 0;
             audioes[2].pause();
             audioes[musicNum].currentTime = 0;
@@ -198,13 +267,13 @@ window.onscroll = showDiv;
 //粉色播放时显示许嵩2
 function showXs(){
     var xs2 = document.getElementById('xs2');
-    if(musicNum == 0){
+    if(musicNum == 0 && !audioes[musicNum].paused){
         xs2.classList.add('animationPlay');
         styles.insertAdjacentHTML('beforeend',`.t1{
             animation: sliding 309s forwards linear;
-        }`)
+        }`);
+        document.removeEventListener('click',showXs)
     }
-    document.removeEventListener('click',showXs)
 }
 document.addEventListener('click',showXs);
 //当划到第二个页面底部时，固定播放控制
@@ -214,14 +283,14 @@ function setPlayStyle() {
     var scroolTop= Math.round(document.documentElement.scrollTop); 
     // console.log(contentHeight+","+scroolTop)
     if(scroolTop>=contentHeight){
-        styles.innerHTML = `.play{
+        styles.insertAdjacentHTML('beforeend',`.play{
             position: fixed;
             top: 10px;
             box-shadow:inset 0 0 10px 5px #2c3e50c2;
         }.sound{
             position: fixed;
             top: 37px;
-        }`;
+        }`);
         document.removeEventListener('scroll',setPlayStyle);
     }
 }
@@ -234,3 +303,15 @@ function soundSitting(){
     }
 }
 soundSitting();
+
+//打开遮罩
+function openFront(){
+    var fr1 = document.getElementById('fr1');
+    var fr2 = document.getElementById('fr2');
+    fr1.style.transform = 'translateX(-100%)';
+    fr2.style.transform = 'translateX(100%)';
+    styles.insertAdjacentHTML('beforeend',`#annivesary{
+        -webkit-animation: flying2 1s forwards ease-in;
+        animation: flying2 1s forwards ease-in;
+    }`)
+}

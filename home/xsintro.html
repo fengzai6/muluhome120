@@ -11,6 +11,11 @@
 <body>
     <div class="container">
         <div class="content con1" id="con1">
+            <div class="frontOpen" onclick="openFront()">
+                <!-- <div id="openButton">《》</div> -->
+                <div id="fr1"><span>许</span></div>
+                <div id="fr2"><span>嵩</span></div>
+            </div>
             <div class="quan">
                 <img src="./images/15th.png" id="annivesary">
             </div>
@@ -31,7 +36,7 @@
         <div class="content con2">
             <div class="quan2">
                 <div class="lyric">
-                    <p class="text t1" style="--d:0.5s; --dr:14s;">
+                    <p class="text t1" id="t1" style="--d:0.5s; --dr:14s;">
                         <em>粉色信笺 - 许嵩<br></em>
                         词：许嵩<br>
                         曲：许嵩<br>
@@ -111,8 +116,30 @@
                         好想延续到<br>
                         好想延续到永远
                     </p>
-                    <!-- <p class="text t2" style="--d:1.5s; --dr:13s;">~这一如你和我的相遇 像在深海里开启了香槟</p>
-                    <p class="text t3" style="--d:2s; --dr:12s;">~~~~~~这一如你和我的相遇 像在深海里开启了香槟</p> -->
+                    <p class="text" id="t2" style="--d:1.5s; --dr:13s;">
+                        <em>断桥残雪 – 许嵩</em><br>
+                        词：许嵩<br>
+                        曲：许嵩<br>
+                        寻不到花的折翼枯叶蝶<br>
+                        永远也看不见凋谢<br>
+                        江南夜色下的小桥屋檐<br>
+                        读不懂塞北的荒野<br>
+                        梅开时节因寂寞而缠绵<br>
+                        春归后又很快湮灭<br>
+                        ......
+                    </p>
+                    <p class="text" id="t3" style="--d:2s; --dr:12s;">
+                        <em>我想牵着你的手 – 许嵩</em><br>
+                        词：许嵩<br>
+                        曲：许嵩<br>
+                        Vae他有一些烦恼<br>
+                        反正现在的年轻人<br>
+                        都有许多烦恼<br>
+                        那么多要思考<br>
+                        那么多要寻找<br>
+                        诱惑太多 不坚定就犯错了<br>
+                        ......
+                    </p>
                 </div>
             </div>
             
@@ -138,6 +165,7 @@
 </body>
 <style id="style-tag"></style>
 <style id="soundOn"></style>
+<style id="whoFront"></style>
 <style id="musicpause"></style>
 <style id="musicpause2"></style>
 <script src="./js/xsintro.js"></script>

@@ -16,9 +16,73 @@
 /* -----------第一个----------- */
 /* -----------第一个----------- */
 /* -----------第一个----------- */
-.con1{
+.con2{
+    position: absolute;
+}
+.frontOpen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(245, 231, 220); */
+    /* backdrop-filter: blur(5px) saturate(80%); */
+    z-index: 2;
+    display: flex;
+}
+#openButton{
+    position: absolute;
+}
+.frontOpen div{
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+    position: relative;
+    transition: 3s;
+    /* backdrop-filter: blur(10px) grayscale(80%); */
+}
+@keyframes change{
+    0%{
+        backdrop-filter: blur(7px) grayscale(60%);
+    }
+    to{
+        border-right: #9ab7be solid 3px;
+        backdrop-filter: blur(10px) grayscale(80%);
+    }
+}
+@keyframes change2{
+    0%{
+        backdrop-filter: blur(7px) grayscale(60%);
+    }
+    to{
+        border-left: #9ab7be solid 3px;
+        backdrop-filter: blur(10px) grayscale(80%);
+    }
+}
+.frontOpen div span{
+    position: absolute;
+    top: 40%;
+    font-size: 4rem;
+    font-style: italic;
+    margin: 15px;
+    font-weight: bolder;
+    text-shadow: 0px 5px 5px #152a41;
+}
+#fr1{
+    background: linear-gradient(90deg,#b181a53d,#2c3e5047);
+    border-right: #2c3e50 solid 3px;
+    animation: change 1.5s infinite alternate linear;
+}
+#fr2{
+    background: linear-gradient(270deg,#ae8ba53d,#2c3e5047);
+    border-left: #2c3e50 solid 3px;
+    animation: change2 1.5s infinite alternate linear;
 }
 
+#fr1 span{
+    right: 0;
+}
+#fr2 span{
+    left: 0;
+}
 #xs1{
     position: absolute;
     width: 25%;
@@ -63,9 +127,6 @@
     height: 40%;
     top: 5%;
     left: -10%;
-    animation: flying2 1s forwards ease-in;
-    /* filter: drop-shadow(0px 0px 5px #696969); */
-    /* margin-top: 13%; */
 }
 .lyric{
     position: absolute;
@@ -80,26 +141,19 @@
 .text{
     width: 100%;
     text-align: center;
-    /* white-space: nowrap; */
     font-size: 25px;
     line-height: 40px;
-    /* font-style: italic; */
     color: #2c3e50;
-    /* transition: 1s; */
-    /* animation: sliding 10s infinite linear; */
-    animation-delay: var(--d);
-    animation-duration: var(--dr);
+    
 }
-
-.t2{
-    font-size: 65px;
-    color: aqua;
-    animation: sliding2 10s infinite linear;
-
+#t1{
+    display: block;
 }
-.t3{
-    font-size: 75px;
-    color: bisque;
+#t2{
+    display: none;
+}
+#t3{
+    display: none;
 }
 .text em{
     font-size: 30px;
@@ -239,6 +293,8 @@
     align-items: center;
     box-shadow: inset -3px -3px 10px 5px #59647eb4;
     animation: big 0.5s infinite alternate;
+    left: 4%;
+    top: 5%;
 }
 .music p{
     color: aliceblue;
@@ -260,20 +316,19 @@
 #m1{
     background-image: url(../images/music-bg1.jpg);
     background-size: cover;
-    left: 30%;
-    top: 25%;
+    z-index: 1;
 }
 #m2{
     background-image: url(../images/music-bg2.jpg);
     background-size: cover;
-    left: 60%;
-    top: 25%;
+    left: 5%;
+    top: 5%;
 }
 #m3{
     background-image: url(../images/music-bg3.jpg);
     background-size: cover;
-    left: 45%;
-    top: 50%;
+    left: 6%;
+    top: 5%;
 }
 @keyframes big{
     /* 0%{
