@@ -31,7 +31,7 @@ pre {
     text-align: center;
     font-size: 20px;
     color: #0f1922;
-    font-family: 'SThupo';
+    font-family: 'hupo';
 }
 
 /* 给气泡来点阴影吧 */
@@ -97,7 +97,7 @@ pre{
 
 `;
 
-var speed = 40;
+var speed = 30;
 // var delayTime = speed * (styles.length + 200);
 
 // 返回输入了的html

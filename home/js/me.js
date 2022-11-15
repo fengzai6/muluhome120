@@ -71,21 +71,51 @@ for (var i in welcomeBoxs) {
 }
 function boxOpen() {
     // 得到绑定目标id
-    var inputId = this.getAttribute("with");
+    var getWith =this.getAttribute("with");
+    if(getWith[4] == "a"){
+        inputId = "left-box1";
+    }else{
+        inputId = "left-box2";
+    }
+    console.log(inputId)
     // 获取绑定目标
     var inputItem = document.getElementById(inputId);
     // 打开列表
     inputItem.checked = true;
     // 找到关键字，并找到指向元素
-    var htmlItem = inputItem.getAttribute("with");
+    var htmlItem = this.getAttribute("with");
+    console.log(htmlItem)
     var change = document.getElementById(htmlItem);
-    //选择第一个选项
-    var divFather = document.getElementsByClassName(htmlItem)[0];
-    divFather.firstElementChild.checked = true;
+    // 列表点击时，关闭所有列表包括自己所指向的网页
+    var htmlHetght = document.getElementsByClassName("right-box2");
+    for (var i = 0; i < htmlHetght.length; i++) {
+        //添加一个循环找check-box2，遇见则改为box
+        htmlHetght[i].setAttribute("class", "right-box");
+    }
+    // 找到里面的列表开关，变为全关
+    var uncheck = document.getElementsByClassName("csslist");
+    for (var j = 0; j < uncheck.length; j++) {
+        uncheck[j].checked = false;
+    }
+    switch (getWith[5]){
+        case '1':
+            uncheck[0].checked = true;
+            break;
+        case '2':
+            uncheck[1].checked = true;
+            break;
+        case '3':
+            uncheck[2].checked = true;
+            break;
+        case '4':
+            uncheck[3].checked = true;
+            break;
+    }
     // 改类名为我们要的类名
     change.setAttribute("class", "right-box2");
     //刷新框架
     change.childNodes[1].contentWindow.location.reload(true);
+    
     //关闭起始页
     document.getElementById("welcome").style.display = "none";
 }
@@ -102,6 +132,7 @@ function displayWelcome(){
         htmlHetght[i].setAttribute("class", "right-box");
     }
 }
+
 
 //打开菜单，关闭菜单
 var leftBar = document.querySelector(".left");

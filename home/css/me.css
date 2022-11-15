@@ -83,7 +83,6 @@ body{
     border-left: 6px solid var(--text);
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-    transition: .2s;
     height: auto;
     font-weight: normal;
 }
@@ -188,6 +187,10 @@ body{
 .bubble{
     transition: all 500ms;
     position: absolute;
+}
+.bubble:hover{
+    box-shadow: inset -8px -8px 18px 18px rgba(78, 144, 155, 0.8),
+    2px 3px 10px rgba(48, 83, 104,0.7);
 }
 pre{
     /* position: absolute; */
@@ -416,3 +419,7 @@ pre{
     font-family: 'JetBrains Mono';
     src: url('https://gw.alipayobjects.com/os/k/app/JetBrainsMono-Regular.ttf') format('truetype');
   }
+@font-face {
+    font-family: 'hupo';
+    src: url(./cykl4pagbno3k9ss8hi2gf3wrqq0ya2e.ttf);
+}
