@@ -29,6 +29,52 @@ body{
     transition: 0.1s;
     opacity: 0.5;
 }
+#topAlert{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    height: 3.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showAl{
+    animation: showAlert 2s;
+}
+.switchAlert{
+    text-align: center;
+    line-height: 30px;
+    width: 8em;
+    height: 30px;
+    /* border: 1px #202e3c solid; */
+    font-size: small;
+    font-weight: 100;
+    box-shadow: 0px 2px 6px #7d7d7d;
+    border-radius: 25px;
+    background: rgb(255, 255, 255,0.4);
+    backdrop-filter: blur(5px) saturate(50%);
+}
+@keyframes showAlert{
+    0%{
+        top: 0;
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        top: 3.6rem;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        top: 3.6rem;
+        opacity: 0;
+    }
+}
 .empty1 div{
     display: flex;
     justify-content: center;

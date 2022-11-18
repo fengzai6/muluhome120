@@ -60,6 +60,9 @@ function checkd() {
     change.setAttribute("class", "right-box2");
     //刷新框架
     change.childNodes[1].contentWindow.location.reload(true);
+    //显示切换按键
+    var topSwitch = document.getElementById('switch');
+    topSwitch.style = 'opacity: 1;'
     //关闭起始页
     document.getElementById("welcome").style.display = "none";
 }
@@ -77,14 +80,12 @@ function boxOpen() {
     }else{
         inputId = "left-box2";
     }
-    console.log(inputId)
     // 获取绑定目标
     var inputItem = document.getElementById(inputId);
     // 打开列表
     inputItem.checked = true;
     // 找到关键字，并找到指向元素
     var htmlItem = this.getAttribute("with");
-    console.log(htmlItem)
     var change = document.getElementById(htmlItem);
     // 列表点击时，关闭所有列表包括自己所指向的网页
     var htmlHetght = document.getElementsByClassName("right-box2");
@@ -97,17 +98,17 @@ function boxOpen() {
     for (var j = 0; j < uncheck.length; j++) {
         uncheck[j].checked = false;
     }
-    switch (getWith[5]){
-        case '1':
+    switch (getWith.slice(4)){
+        case 'a1':
             uncheck[0].checked = true;
             break;
-        case '2':
+        case 'a2':
             uncheck[1].checked = true;
             break;
-        case '3':
+        case 'b1':
             uncheck[2].checked = true;
             break;
-        case '4':
+        case 'b2':
             uncheck[3].checked = true;
             break;
     }
@@ -150,10 +151,61 @@ function closeMenu(){
 document.querySelector('.right').addEventListener('mouseover',closeMenu);
 document.querySelector('.empty3').addEventListener('mouseover',openMenu);
 
-var htmlLIst = new Array(4);
+// 切换切换
+function doThis(htmlId,num,num2){
+    var uncheck = document.getElementsByClassName("csslist");
+    for (var j = 0; j < uncheck.length; j++) {
+        uncheck[j].checked = false
+    }
+    uncheck[num2].checked = true;
+    var uncheckLeft = document.getElementsByName('left')[num];
+    uncheckLeft.checked = true;
+    var change = document.getElementById(htmlId);
+    change.setAttribute("class", "right-box2");
+    change.childNodes[1].contentWindow.location.reload(true);
+}
+//提示到头或者到尾
+function showAlert(text){
+    let alertObj = document.getElementById('topAlert');
+    let alertObj2 = document.querySelector('.switchAlert');
+    alertObj2.innerText = text;
+    alertObj.className = 'showAl';
+    setTimeout(function(){
+        alertObj.className = 'null';
+    },2000)
+}
 function lastHtml(){
-
+    var thisHtml = document.getElementsByClassName('right-box2')[0];
+    let htmlId = thisHtml.id;
+    switch(htmlId){
+        case 'htmla1':
+            return showAlert('也许回到夏至了');
+        case 'htmla2':
+            thisHtml.className = 'right-box';
+            return doThis('htmla1',0,0);
+        case 'htmlb1':
+            thisHtml.className = 'right-box';
+            return doThis('htmla2',0,1);
+        case 'htmlb2':
+            thisHtml.className = 'right-box';
+            return doThis('htmlb1',1,2);
+    }
+    
 }
 function nextHtml(){
-
+    var thisHtml = document.getElementsByClassName('right-box2')[0];
+    let htmlId = thisHtml.id;
+    switch (htmlId) {
+        case 'htmla1':
+            thisHtml.className = 'right-box';
+            return doThis('htmla2', 0, 1);
+        case 'htmla2':
+            thisHtml.className = 'right-box';
+            return doThis('htmlb1', 1, 2);
+        case 'htmlb1':
+            thisHtml.className = 'right-box';
+            return doThis('htmlb2', 1, 3);
+        case 'htmlb2':
+            return showAlert('还会迎来冬至吗');
+    }
 }
