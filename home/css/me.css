@@ -22,13 +22,37 @@ body{
     margin: 1px 0px 0px 10px;
     height: 17px;
     width: 23px;
-    background-image: url(/others/bisai/images/menu.png);
+    background-image: url(../images/menu.png);
     background-size: cover;
 }
 .top-menu:hover{
     transition: 0.1s;
     opacity: 0.5;
 }
+.empty1 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 0;
+    /* justify-content: space-around; */
+}
+.empty1 div span{
+    font-size: small;
+    transition: 0.1s;
+}
+.empty1 div span span{
+    font-size: medium;
+    font-family: hupo;
+}
+#nextHtml:hover{
+    text-shadow: 2px 4px 8px #d0932a;
+}
+#lastHtml:hover{
+    text-shadow: 2px 4px 8px #2a6fd0;
+}
+
 .empty3{
     position: fixed;
     width: 1px;
@@ -185,6 +209,7 @@ body{
     flex: 1;
 }
 .bubble{
+    cursor: pointer;
     transition: all 500ms;
     position: absolute;
 }
@@ -421,5 +446,5 @@ pre{
   }
 @font-face {
     font-family: 'hupo';
-    src: url(./cykl4pagbno3k9ss8hi2gf3wrqq0ya2e.ttf);
+    src: url(./Alimama_ShuHeiTi_Bold.ttf);
 }

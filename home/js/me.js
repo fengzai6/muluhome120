@@ -115,7 +115,9 @@ function boxOpen() {
     change.setAttribute("class", "right-box2");
     //刷新框架
     change.childNodes[1].contentWindow.location.reload(true);
-    
+    //显示切换按键
+    var topSwitch = document.getElementById('switch');
+    topSwitch.style = 'opacity: 1;'
     //关闭起始页
     document.getElementById("welcome").style.display = "none";
 }
@@ -131,6 +133,9 @@ function displayWelcome(){
     for (var i = 0; i < htmlHetght.length; i++) {
         htmlHetght[i].setAttribute("class", "right-box");
     }
+    //关闭切换按键
+    var topSwitch = document.getElementById('switch');
+    topSwitch.style = 'opacity: 0;'
 }
 
 
@@ -144,3 +149,11 @@ function closeMenu(){
 }
 document.querySelector('.right').addEventListener('mouseover',closeMenu);
 document.querySelector('.empty3').addEventListener('mouseover',openMenu);
+
+var htmlLIst = new Array(4);
+function lastHtml(){
+
+}
+function nextHtml(){
+
+}
