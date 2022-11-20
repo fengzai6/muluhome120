@@ -35,7 +35,6 @@ body{
     width: 100%;
     height: 3.6rem;
     border-bottom: 1px solid #dadada;
-    /* justify-content: space-between; */
     align-items: center;
     background-color: #fafafa;
     z-index: 3;
@@ -56,12 +55,10 @@ body{
     font-weight: lighter;
     cursor: pointer;
 }
-/* .sidebar-top-contact:hover :first-child, */
 .sidebar-top-right:hover :first-child{
     font-weight: normal;
     font-size: 100.1%;
 }
-/* .sidebar-top-contact:hover .number, */
 .sidebar-top-right:hover div{
     max-height: 100vh;
     padding: 10px;
@@ -80,8 +77,6 @@ body{
     overflow: hidden;
     font-size: small;
     transition: .1s;
-    /* width: 8; */
-    /* padding: 10px; */
 }
 .home{
     top: 3.6rem;
@@ -123,7 +118,8 @@ body{
     left: 40%;
     top: 40%;
     transform-origin: 0 0;
-    animation: zhuan 5s infinite linear;
+    -webkit-animation: zhuan 5s infinite linear;
+            animation: zhuan 5s infinite linear;
 }
 .name{
     font-size: 300%;
@@ -160,25 +156,15 @@ body{
 }
 
 .footer{
-    /* overflow: hidden; */
-    /* border: 1px solid red; */
     width: 100%;
     height: 150px;
     position: absolute;
     bottom: 0;
     left: 0;
-    /* flex: 1; */
-    /* overflow: hidden; */
-    /* display: block; */
-    /* font-size: 0; */
 }
 #waves{
-    /* overflow: hidden; */
-    /* border-style: unset; */
     display: block;
     height: 100%;
-    /* vertical-align: top; */
-    /* vertical-align:text-top(text-bottom); */
 }
 
 
@@ -194,6 +180,11 @@ body{
 }
 
 /* ---------动画---------- */
+@-webkit-keyframes zhuan{
+    to{
+        transform: rotate(1turn);
+    }
+}
 @keyframes zhuan{
     to{
         transform: rotate(1turn);

@@ -9,13 +9,11 @@ body{
 .waves{
     display: flex;
     /* 设置投影 */
-    filter: drop-shadow(80px 0 0 rgba(57, 141, 194, 0.5));
+    -webkit-filter: drop-shadow(80px 0 0 rgba(57, 141, 194, 0.5));
+            filter: drop-shadow(80px 0 0 rgba(57, 141, 194, 0.5));
     position: absolute;
     bottom: 0;
     left: -200px;
-    /* overflow: hidden; */
-
-    /* filter: drop-shadow(120px 0 0 rgba(57, 141, 194, 0.5)); */
 }
 .wave{
     position: relative;
@@ -37,10 +35,13 @@ body{
     left: -100%;
     top: 50%;
     /* 执行动画 时长 贝塞尔曲线 无限 轮回 */
-    animation: upDown 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate
+    -webkit-animation: upDown 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate
+    ,wave 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+            animation: upDown 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate
     ,wave 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
     /* 通过自定义函数给每个wave安排延迟 */
-    animation-delay: var(--d1),var(--d2);
+    -webkit-animation-delay: var(--d1),var(--d2);
+            animation-delay: var(--d1),var(--d2);
 }
 .wave::after{
     content: "";
@@ -54,14 +55,25 @@ body{
     top: 50%;
     z-index: -1;
     /* 执行动画 时长 贝塞尔曲线 无限 轮回 */
-    animation: upDown2 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate
+    -webkit-animation: upDown2 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate
+    ,wave 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+            animation: upDown2 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate
     ,wave 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
     /* 通过自定义函数给每个wave安排延迟 */
-    animation-delay: var(--d1),var(--d2);
+    -webkit-animation-delay: var(--d1),var(--d2);
+            animation-delay: var(--d1),var(--d2);
 }
 @media only screen and (max-width: 900px){
     .wave{
         height: 110px;
+    }
+}
+@-webkit-keyframes upDown{
+    0%{
+        top: 80%;
+    }
+    to{
+        top: 40%;
     }
 }
 @keyframes upDown{
@@ -72,12 +84,28 @@ body{
         top: 40%;
     }
 }
+@-webkit-keyframes upDown2{
+    0%{
+        top: 75%;
+    }
+    to{
+        top: 30%;
+    }
+}
 @keyframes upDown2{
     0%{
         top: 75%;
     }
     to{
         top: 30%;
+    }
+}
+@-webkit-keyframes wave{
+    0%{
+        transform: rotateZ(-20deg);
+    }
+    to{
+        transform: rotateZ(20deg);
     }
 }
 @keyframes wave{

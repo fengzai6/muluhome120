@@ -74,14 +74,9 @@
     text-align: center
 }
 #fish{
-    /* position: absolute; */
-    /* left: -15px; */
-    /* margin-left: 15%; */
-    /* transform-origin: 15% 50%; */
     transform-origin: 25% 65%;
     width: 70%;
     transform: rotate(5deg);
-    /* -webkit-transform: rotate(3deg) scale(75%); */
     transition: 0.1s;
 }
 
@@ -94,8 +89,6 @@
     right: 30px;
     top: 20px;
     transform: rotate(15deg);
-    /* transition: 0.15s; */
-    /* animation:up 1s; */
 }
 .footer{
     height: 50px;
@@ -107,8 +100,21 @@
     position: absolute;
     white-space: nowrap;
     font-size: 23px;
-    animation: infinite 6s cycle linear;
+    -webkit-animation: infinite 6s cycle linear;
+            animation: infinite 6s cycle linear;
     text-shadow: 0 0 10px rgb(255, 255, 255),0 0 20px rgb(255, 255, 255);
+}
+@-webkit-keyframes up{
+    0%{
+        top: 10px;
+        transform: rotate(18deg);
+        opacity: 1;
+    }
+    to{
+        top: -30px;
+        transform: rotate(20deg) scale(120%);
+        opacity: 0;
+    }
 }
 @keyframes up{
     0%{
@@ -119,6 +125,18 @@
     to{
         top: -30px;
         transform: rotate(20deg) scale(120%);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes up2{
+    0%{
+        right: 35px;
+        top: 10px;
+        opacity: 1;
+    }
+    to{
+        transform: rotate(10deg) scale(120%);
+        top: -30px;
         opacity: 0;
     }
 }
@@ -134,6 +152,15 @@
         opacity: 0;
     }
 }
+@-webkit-keyframes cycle{
+    0%{
+        /* transform: translateX(-16em); */
+        left: calc(100vw);
+    }
+    to{
+        left: -16em;
+    }
+}
 @keyframes cycle{
     0%{
         /* transform: translateX(-16em); */
@@ -141,6 +168,5 @@
     }
     to{
         left: -16em;
-        /* transform: translateX(calc(100vw+16em)); */
     }
 }

@@ -41,25 +41,9 @@ pre {
 }
 
 /* 现在加上动画效果让气泡生动起来！ */
-:root{
-    --abc: infinite alternate;
-}
-#welcome-box1{
-    animation: flying 2s var(--abc) ease-out,
-    big 2s var(--abc) linear;
-}
-#welcome-box2{
-    animation: flying 3s var(--abc) ease-out,
-    big2 3s var(--abc) linear;
-}
-#welcome-box3{
-    animation-duration: 2.5s;
-    animation: flying 2s var(--abc) ease-out,
-    big 2s var(--abc) linear;
-}
-#welcome-box4{
-    animation: flying 2.8s var(--abc) ease-out,
-    big2 2.8s var(--abc) linear;
+.bubble{
+  animation: flying var(--d1) infinite alternate ease-out,
+  var(--a2) var(--d2) infinite alternate linear;
 }
 
 /* 多加点飘落的爱心吧~*/
@@ -96,9 +80,8 @@ pre{
 }
 
 `;
-
+//速度
 var speed = 30;
-// var delayTime = speed * (styles.length + 200);
 
 // 返回输入了的html
 const getStyleHtml = function () {
@@ -152,9 +135,7 @@ const writeStyles = function (message, index, interval) {
   if (index < message.length) {
     const pre = document.getElementById('style-text');
     pre.scrollTop = pre.scrollHeight;
-    // console.log(index)=0
     writeStyleChar(message[index++]);
-    // console.log(index)=1
     //递归写字
     // return setTimeout(
     //   () => writeStyles(message, index, interval),
@@ -169,27 +150,3 @@ const writeStyles = function (message, index, interval) {
 
 //输入的字 初始量0  写字速度
 writeStyles(styles, 0, speed);
-
-//增加页面元素
-// setTimeout(function(){
-//     document.getElementById('style-tag').insertAdjacentHTML(
-//       'beforeend',
-//       `\#welcome-box1{
-//         left: 15%;
-//         top: 160px;
-//     }
-//     #welcome-box2{
-//         left: 35%;
-//         top: 155px;
-//     }
-//     #welcome-box3{
-//         right: 35%;
-//         top: 160px;
-//     }
-//     #welcome-box4{
-//         right: 15%;
-//         top: 155px;
-//     }\
-//     `,
-//     );
-// },delayTime);

@@ -27,7 +27,7 @@ function openBox() {
     // 改类名为我们要的类名
     change.setAttribute("class", "right-box2");
     //刷新框架
-    change.childNodes[1].contentWindow.location.reload(true);
+    // change.childNodes[1].contentWindow.location.reload(true);
 }
 
 //外面点击，里面的选择全关
@@ -59,7 +59,7 @@ function checkd() {
     // 改类名为我们要的类名
     change.setAttribute("class", "right-box2");
     //刷新框架
-    change.childNodes[1].contentWindow.location.reload(true);
+    // change.childNodes[1].contentWindow.location.reload(true);
     //显示切换按键
     var topSwitch = document.getElementById('switch');
     topSwitch.style = 'opacity: 1;'
@@ -115,7 +115,7 @@ function boxOpen() {
     // 改类名为我们要的类名
     change.setAttribute("class", "right-box2");
     //刷新框架
-    change.childNodes[1].contentWindow.location.reload(true);
+    // change.childNodes[1].contentWindow.location.reload(true);
     //显示切换按键
     var topSwitch = document.getElementById('switch');
     topSwitch.style = 'opacity: 1;'
@@ -162,7 +162,7 @@ function doThis(htmlId,num,num2){
     uncheckLeft.checked = true;
     var change = document.getElementById(htmlId);
     change.setAttribute("class", "right-box2");
-    change.childNodes[1].contentWindow.location.reload(true);
+    // change.childNodes[1].contentWindow.location.reload(true);
 }
 //提示到头或者到尾
 function showAlert(text){
@@ -177,33 +177,41 @@ function showAlert(text){
 function lastHtml(){
     var thisHtml = document.getElementsByClassName('right-box2')[0];
     let htmlId = thisHtml.id;
+    var name = document.getElementById('nowName');
     switch(htmlId){
         case 'htmla1':
             return showAlert('也许回到夏至了');
         case 'htmla2':
             thisHtml.className = 'right-box';
+            name.innerText = '那些年';
             return doThis('htmla1',0,0);
         case 'htmlb1':
             thisHtml.className = 'right-box';
+            name.innerText = '许嵩';
             return doThis('htmla2',0,1);
         case 'htmlb2':
             thisHtml.className = 'right-box';
+            name.innerText = '木鱼';
             return doThis('htmlb1',1,2);
     }
     
 }
 function nextHtml(){
     var thisHtml = document.getElementsByClassName('right-box2')[0];
+    var name = document.getElementById('nowName');
     let htmlId = thisHtml.id;
     switch (htmlId) {
         case 'htmla1':
             thisHtml.className = 'right-box';
+            name.innerText = '许嵩';
             return doThis('htmla2', 0, 1);
         case 'htmla2':
             thisHtml.className = 'right-box';
+            name.innerText = '木鱼';
             return doThis('htmlb1', 1, 2);
         case 'htmlb1':
             thisHtml.className = 'right-box';
+            name.innerText = 'THE END';
             return doThis('htmlb2', 1, 3);
         case 'htmlb2':
             return showAlert('还会迎来冬至吗');
