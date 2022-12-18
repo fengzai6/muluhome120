@@ -16,7 +16,6 @@ pre {
 
 /* 先搞出4个气泡先 */
 .bubble{
-    position: absolute;
     top: 150px;
     width: 150px;
     height: 150px;

@@ -1,0 +1,47 @@
+/* ----------响应式------------ */
+@media only screen and (max-width: 900px){
+    #xs1{
+        width: 70%;
+        left: 15%;
+    }
+    #xs1-back{
+        width: 80%;
+        bottom: 0;
+        right: 0;
+    }
+    .quan{
+        bottom: 0%;
+        width: 90%;
+        left: 5%;
+        height: 60vh;
+    }
+    .quan2{
+        top: 0%;
+        width: 90%;
+        left: 5%;
+        height: 80vh;
+    }
+    .music{
+        width: 100px;
+        height: 100px;
+    }
+    .play{
+        width: 26%;
+        left: 37%;
+    }
+    #xs2{
+        height: 50%;
+        left: -10%;
+    }
+    #xs3{
+        display: none;
+        right: -10%;
+    }
+    .text{
+        font-size: 16px;
+    }
+    .text em{
+        font-size: 20px;
+        line-height: 40px;
+    }
+}

@@ -352,6 +352,12 @@ pre em {
     left: 8%;
     top: 80px;
 }
+#welcome-box1{
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 25px;
+}
 #welcome-box2{
     left: 8%;
     top: 320px;

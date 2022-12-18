@@ -1,0 +1,20 @@
+/* ----------响应式------------ */
+@media only screen and (max-width: 900px){
+    .sidebar-top-right{
+        display: none;
+    }
+    #switch{
+        padding: 0;
+    }
+    pre{
+        display: none;
+    }
+    .bubbles{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 7rem;
+    }
+    .bubble{
+        position:static;
+    }
+}

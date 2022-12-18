@@ -1,0 +1,26 @@
+/* ----------响应式------------ */
+@media only screen and (max-width: 900px){
+    .header{
+        font-size: medium;
+        margin-bottom: -25px;
+    }
+    .content{
+        height: auto;
+    }
+    .img{
+        height: 180px;
+    }
+}
+/* ----------响应式------------ */
+@media only screen and (max-width: 1180px){
+    .header{
+        font-size: medium;
+        margin-bottom: -25px;
+    }
+    .content{
+        height: auto;
+    }
+    .img{
+        height: 200px;
+    }
+}
