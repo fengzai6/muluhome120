@@ -19,6 +19,6 @@
     "theme_color": "#FFE8E7", //主题颜色，用于控制浏览器地址栏着色
     "display": "standalone", // 定义应用的显示方式
     "orientation": "portrait",
-    "start_url": "/", // 打开后第一个出现的页面地址
+    "start_url": "/index.html", // 打开后第一个出现的页面地址
     "scope": "/" // PWA作用域
 }
