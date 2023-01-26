@@ -1,0 +1,18 @@
+香港
+trojan://460b7307-a4d1-4e52-b59a-e82eaf78eda5@dl-hk3.efyunpan.com:443?security=tls&headerType=none&type=tcp&sni=data-hk.efyunpan.com#%E9%A6%99%E6%B8%AF+03
+
+台湾
+trojan://460b7307-a4d1-4e52-b59a-e82eaf78eda5@dl-tw2.efyunpan.com:443?security=tls&headerType=none&type=tcp&sni=data-tw.efyunpan.com#%E5%8F%B0%E6%B9%BE+02
+
+日本
+trojan://460b7307-a4d1-4e52-b59a-e82eaf78eda5@dl-jp3.efyunpan.com:443?security=tls&headerType=none&type=tcp&sni=data-jp.efyunpan.com#%E6%97%A5%E6%9C%AC+03
+
+新加坡
+trojan://460b7307-a4d1-4e52-b59a-e82eaf78eda5@dl-sg3.efyunpan.com:443?security=tls&headerType=none&type=tcp&sni=data-sg.efyunpan.com#%E6%96%B0%E5%8A%A0%E5%9D%A1+03
+
+win&mac clash下载：https://github.com/Fndroid/clash_for_windows_pkg/releases
+android clash下载：https://github.com/Kr328/ClashForAndroid/releases
+
+v2 安卓下载：https://github.com/2dust/v2rayNG/releases
+
+软件导入即可
