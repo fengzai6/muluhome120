@@ -6,6 +6,8 @@ body{
     /* background: url(./背景2.png) ; */
     background-color: #eaeaea;
     /* background-size: 100vh; */
+    margin: 0 auto;
+    max-width: 720px;
 }
 .header{
     width: 100%;
