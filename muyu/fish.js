@@ -33,6 +33,10 @@ function knock(){
         document.getElementById('foottext').style.display="block";
     }   
 }
+async function mouseClick(){
+    
+}
+
 var ss = 0;
 function add(){
     var sumed = document.getElementById('sum');
