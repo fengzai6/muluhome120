@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="只会切图的前端">
+        <title>canvas制作动态特效文字</title>
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+            }
+
+            canvas {
+                /* background: black; */
+                width: 100vw;
+                height: 100vh;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="myCanvas"></canvas>
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            var particles = [];
+            var mouse = {
+                x: 0,
+                y: 0
+            }
+            //随机颜色
+            var colors = ["#38f9d7", "#8ec5fc", "#f5576c", "#FFF0A5", "#FFB03B", "#764ba2", "#8E2800"];
+            //画布大小
+            var cw = canvas.width = window.innerWidth;
+            var ch = canvas.height = window.innerHeight;
+
+            //颗粒
+            function Particle(x, y) {
+                //初始位置
+                this.x = Math.random() * cw;
+                this.y = Math.random() * ch;
+                //目标位置
+                this.dest = {
+                    x: x,
+                    y: y
+                };
+                //半径
+                this.r = Math.random() * 5 + 2;
+                this.vx = (Math.random() - 0.5) * 20;
+                this.vy = (Math.random() - 0.5) * 20;
+                this.accX = 0;
+                this.accY = 0;
+                this.friction = Math.random() * 0.05 + 0.94;
+
+                this.color = colors[Math.floor(Math.random() * 6)];
+            }
+
+            Particle.prototype.draw = function() {
+                this.accX = (this.dest.x - this.x) / 1000;
+                this.accY = (this.dest.y - this.y) / 1000;
+                this.vx += this.accX;
+                this.vy += this.accY;
+                this.vx *= this.friction;
+                this.vy *= this.friction;
+
+                this.x += this.vx;
+                this.y += this.vy;
+
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                //画圆
+                ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
+                ctx.fill();
+
+                var a = this.x - mouse.x;
+                var b = this.y - mouse.y;
+
+                var distance = Math.sqrt(a * a + b * b);
+                if (distance < 70) {
+                    this.accX = (this.x - mouse.x) / 100;
+                    this.accY = (this.y - mouse.y) / 100;
+                    this.vx += this.accX;
+                    this.vy += this.accY;
+                }
+            }
+            //初始化
+            function init() {
+                ctx.clearRect(0, 0, cw, ch);
+                //调整字体大小
+                ctx.font = "bold " + (cw / 6) + "px sans-serif";
+                ctx.textAlign = "center";
+                ctx.fillText("❤彭靖中❤", cw / 2, ch / 1.5);
+                //写字
+                //画布上指定矩形的像素数据
+                var data = ctx.getImageData(0, 0, cw, ch).data;
+                ctx.clearRect(0, 0, cw, ch);
+                ctx.globalCompositeOperation = "screen";
+
+                particles = [];
+                for (var i = 0; i < cw; i += Math.round(cw / 150)) {
+                    for (var j = 0; j < ch; j += Math.round(cw / 150)) {
+                        if (data[((i + j * cw) * 4) + 3] > 150) {
+                            particles.push(new Particle(i,j));
+                        }
+                    }
+                }
+            }
+            //渲染
+            function render() {
+                //回调函数执行次数通常是每秒 60 次
+                requestAnimationFrame(render);
+                ctx.clearRect(0, 0, cw, ch);
+                for (var i = 0; i < particles.length; i++) {
+                    particles[i].draw();
+                }
+            }
+            //执行初始化函数
+            init();
+            //画布渲染
+            render();
+
+            function onMouseMove(e) {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+            }
+            //鼠标移动事件
+            window.addEventListener("mousemove", onMouseMove);
+        </script>
+    </body>
+</html>
