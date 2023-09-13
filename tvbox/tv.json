@@ -1,8 +1,7 @@
-//以下内容均为为互联网收集  https://www.qqwj.live/tvbox/tv1.json
+//以下内容均为为互联网收集  https://www.qqwj.live/tvbox/tv.json
 {
     "wallpaper":"https://picsum.photos/1280/720/?blur=10",
-    // "warningText": "接口完全免费，切勿付费购买。",
-    "spider":"https://www.qqwj.live/tvbox/a620.jar",
+    "spider":"https://www.qqwj.live/tvbox/a620.jar;md5;09BAF4A03D362D96F0FC14085C343191",
     "lives":[{"name":"live","type":0,"url":"https://www.qqwj.live/tvbox/live.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
     "sites": [
     {"key":"dr_豆瓣","name":"🔍豆瓣推荐┃微信公众号：强强玩机","type":3,"api":"https://gitcode.net/qq_32394351/dr_py/-/raw/master/libs/drpy2.min.js","searchable":0,"quickSearch":0,"filterable":1,"ext":"https://gitcode.net/qq_32394351/dr_py/-/raw/master/js/drpy.js"},
