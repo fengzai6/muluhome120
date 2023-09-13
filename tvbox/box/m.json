@@ -1,6 +1,7 @@
 //以下内容为互联网收集，只为自用…… https://raw.iqiq.io/liu673cn/box/main/m.json
 {
 "wallpaper":"https://picsum.photos/1280/720/?blur=10",
+"warningText": "接口完全免费，切勿付费购买。",
 "spider":"./sub/jar/a620.jar;md5;09BAF4A03D362D96F0FC14085C343191",
 "lives":[{"name":"live","type":0,"url":"./sub/live/tv.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
 "sites": [
