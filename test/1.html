@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="img-box">
+        <div class="img-title-box">
+            <p class="img-title"><span>感谢支持！</span><span>有您慷慨！</span></p>
+            <p class="img-title hide">您就该幸福一辈子！</p>
+        </div>
+        <div class="img-content">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+        <div class="img-close"> </div>
+    </div>
+</body>
+<style>
+    .img-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.img-title-box {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  padding: 20px;
+}
+
+.img-title {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.img-content {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-content img {
+  width: 35%;
+  height: 300px;
+  border: 1px solid red;
+}
+
+.img-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  cursor: pointer;
+}
+/* 移动端 */
+@media screen and (max-width: 768px) {
+  .img-box {
+    width: 80%;
+  }
+  .img-content img {
+    width: 40%;
+    height: 200px;
+  }
+}
+</style>
+</html>
