@@ -85,7 +85,6 @@
     {"key":"csp_xp_nmys","name":"💢农民影视","type": 3,"api":"csp_XPathFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"./ext/nmys2.json"},
     {"key":"csp_xp_gongreng","name":"💢工人影视","type":3,"api":"csp_XPathMacFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"./ext/gongreng.json"},
     {"key":"csp_xp_jpys","name":"💢极品影视","type":3,"api":"csp_XPathMacFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"./ext/jpys.json"},
-    // {"key":"csp_xp_vip1280","name":"💢VIP电影","type":3,"api":"csp_XPath","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/vip1280.json"},
     {"key":"csp_xp_Gimy","name": "💢Gimy影院","type": 3,"api": "csp_XPathMacFilter","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "./ext/Gimy2.json"},
     {"key":"csp_xp_lezhutv","name":"💢乐猪TV","type":3,"api":"csp_XPathMac","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/lezhutv.json"},
     {"key":"csp_xp_ddg","name":"💢达达龟","type":3,"api":"csp_XPathMacFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"./ext/dadagui.json"},
@@ -98,7 +97,6 @@
     {"key":"csp_xp_wnvod","name": "💢万能影视","type": 3,"api":"csp_XPathFilter","searchable": 1,"quickSearch": 1,"filterable":0,"ext":"./ext//wnvod.json"},
     {"key":"csp_xp_kyikan","name": "💢看一看","type": 3,"api":"csp_XPath","searchable": 1,"quickSearch": 1,"filterable":0,"ext":"./ext/kyikan.json"},
     {"key":"csp_xp_zj883","name":"💢追剧网","type":3,"api":"csp_XPath","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/zj883.json"},
-    // {"key":"csp_xp_lkvod","name":"💢耐看点播","type":3,"api":"csp_XPath","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/lkvod2.json"},
     {"key":"csp_xp_6d","name":"💢六度TV","type":3,"api":"csp_XPathFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"./ext/6d.json"},
     {"key":"csp_xp_348z","name":"💢348电影","type":3,"api":"csp_XPathFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"./ext/348z.json"},
     {"key":"csp_xp_dandanzan10","name":"💢蛋蛋赞","type":3,"api":"csp_XPathFilter","searchable":0,"quickSearch":0,"filterable":1,"ext":"./ext/dandanzan10.json"},
@@ -169,7 +167,6 @@
     {"key":"csp_xbb_星空影视","name":"🍀星空影视","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/星空影视.json"},
     {"key":"csp_xbb_完美看看","name":"🍀完美看看","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/完美看看影视.json"},
     {"key":"csp_xbb_剧白白","name":"🍀剧白白2","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/剧白白-蓝光.json"},
-    // {"key":"csp_xbb_LIBVIO","name":"🍀LI","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/LIBVIO.json"},
     {"key":"csp_xbb_在线之家","name":"🍀在线之家","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/在线之家.json"},
     {"key":"csp_xbb_天空资源","name":"🍀天空资源","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/天空资源.json"},
     {"key":"csp_xbb_克拉TV","name":"🍀克拉TV","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/克拉TV.json"},
@@ -179,8 +176,6 @@
     {"key":"csp_xbb_口袋影院","name":"🍀口袋影院","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/口袋影院.json"},
     {"key": "csp_xbb_神马tv8","name":"🍀神马tv8","type": 3,"api": "csp_XBiubiu","searchable": 1,"quickSearch": 1,"filterable": 0,"ext": "./ext/神马tv8.json"},
     {"key":"csp_xbb_花猫TV","name":"🍀花猫TV","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/花猫TV.json"},
-    // {"key":"csp_xbb_VIP1280","name":"🍀VIP1280","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/VIP1280.json"},
-    // {"key":"csp_xbb_COKEMV","name":"🍀COKEMV","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/COKEMV.json"},
     {"key":"csp_xbb_hdmoli","name":"🍀hdmoli","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/hdmoli.json"},
     
     {"key":"csp_xbb_炫猫影视","name":"🍀炫猫影视","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"./ext/炫猫影视.json"},
@@ -247,7 +242,6 @@
     {"key":"csp_xml_M3U8","name":"🐝M3U8资源","type":0,"api":"http://www.zycaiji.net:7788/api.php/provide/vod/at/xml/","playUrl":"https://jx.m3u8.tv/jiexi/?url=","searchable":1,"quickSearch":1,"filterable":0,"categories":["综艺","动漫","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","国产剧","港台剧","日韩剧","欧美剧","惊悚片","犯罪片","冒险片","悬疑片","动画片","武侠片","奇幻片","少儿","其他片","其他剧"]},
     {"key":"csp_xml_8090","name":"🐝8090资源","type":0,"api":"http://zy.yilans.net:8090/api.php/provide/vod/at/xml/","playUrl":"https://www.8090.la/8090/?url=","searchable":1,"quickSearch":1,"filterable":0,"categories":["综艺","动漫","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","国产剧","港台剧","日韩剧","欧美剧","惊悚片","犯罪片","冒险片","悬疑片","动画片","武侠片","奇幻片","少儿","其他片","其他剧"]},
     {"key":"csp_xml_快播云","name":"🐝快播云","type":1,"api":"http://www.kuaibozy.com/api.php/provide/vod/","playUrl":"","searchable":1,"quickSearch":1},
-    // {"key":"csp_xml_CK资源","name":"🐝CK 资源","type":1,"api":"https://ckzy.me/api.php/provide/vod/","playUrl":"","searchable":1,"quickSearch":1},
     {"key":"csp_xml_红牛资源","name":"🐝红牛资源","type":1,"api":"https://www.hongniuzy2.com/api.php/provide/vod/","playUrl":"","searchable":1,"quickSearch":1},
     {"key":"csp_xml_外国影源","name":"🐝外国影源","type":1,"api":"http://api.nguonphim.tv/api.php/provide/vod/","playUrl":"","searchable":1,"quickSearch":1},
     {"key":"csp_xml_百度资源","name":"🐝百度资源","type":1,"api":"https://api.apibdzy.com/api.php/provide/vod/","playUrl":"","searchable":1,"quickSearch":1},
@@ -270,7 +264,6 @@
     {"key":"csp_xml_橘猫资源","name":"🐝橘猫资源","type":1,"api":"http://www.zitv.cc/api.php/provide/vod/","playUrl":"","searchable":1,"quickSearch":1},
     {"key":"csp_xml_趣看采集","name":"🐝趣看采集","type":1,"api":"https://qkmp4.cn/api.php/provide/vod/","playUrl":"","searchable":1,"quickSearch":1},
     {"key":"csp_xml_松鼠资源","name":"🐝松鼠资源","type":1,"api":"https://m3u8.songshuzy.com/api.php/provide/vod/","playUrl":"","searchable":1,"quickSearch":1},
-    // {"key":"csp_xml_共青春","name":"🐝共青春影院","type":1,"api":"https://gqcyy.com/api.php/provide/vod/","playUrl":"","searchable":1,"quickSearch":1}
     ],
     //解X设置
     "parses":[
