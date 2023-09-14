@@ -3,7 +3,7 @@
     "wallpaper":"https://picsum.photos/1280/720/?blur=10",
     "warningText": "接口完全免费，切勿付费购买。",
     "spider":"./a620.jar;md5;09BAF4A03D362D96F0FC14085C343191",
-    "lives":[{"name":"live","type":0,"url":"./sub/live/tv.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
+    "lives":[{"name":"live","type":0,"url":"./live.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
     "sites": [
     {"key":"csp_Kunyu77","name":"🌤酷云七七┃微信公众号：强强玩机","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
     {"key":"csp_LiteApple","name":"🍎小苹果","type":3,"api":"csp_LiteApple","searchable":1,"quickSearch":1,"filterable":1}, 
