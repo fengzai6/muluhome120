@@ -3,7 +3,8 @@
     "wallpaper":"https://picsum.photos/1280/720/?blur=10",
     "warningText": "接口完全免费，切勿付费购买。",
     // "spider":"./a620.jar;md5;09BAF4A03D362D96F0FC14085C343191",
-    "spider":"./23823.jar;md5;094b4d3625d42893f683cc2e95311153",
+    // "spider":"./23823.jar;md5;094b4d3625d42893f683cc2e95311153",
+    "spider":"./jar/23912.jar;md5;f20b74480c058b1ff6236601f92d65a8",
     "lives":[{"name":"live","type":0,"url":"./live.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
     "sites": [
         {"key":"豆瓣","name":"🎨豆瓣┃微信公众号：强强玩机","type":3,"api":"csp_DouDou","searchable":0,"quickSearch":0,"filterable":0},
