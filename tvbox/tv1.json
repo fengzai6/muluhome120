@@ -9,7 +9,7 @@
     "sites": [
         {"key":"豆瓣","name":"🎨豆瓣┃微信公众号：强强玩机","type":3,"api":"csp_DouDou","searchable":0,"quickSearch":0,"filterable":0},
         {"key":"在线live","name":"📺平台直播（hy,dy...）","type":3,"api":"csp_Yj1211","searchable":1,"quickSearch":1,"filterable":1},
-        {"key":"csp_Kuaikan","name":"👀快看影视","type":3,"api":"csp_Kuaikan","searchable":1,"quickSearch":1,"filterable":1},
+        // {"key":"csp_Kuaikan","name":"👀快看影视","type":3,"api":"csp_Kuaikan","searchable":1,"quickSearch":1,"filterable":1},
         {"key":"csp_Qiqi","name":"🎡迷迷影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"playerType": "2","ext": "http://www.miniku.cc/xgapp.php/v1/"},
         {"key":"csp_yaya","name":"🦆鸭鸭影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext": "https://yayayaaapp.ynf.icu/api.php/app/"},
         {"key":"csp_AppMr","name":"☀明明影视","type":3,"api":"csp_AppMr","searchable":1,"quickSearch":1,"filterable":1},
