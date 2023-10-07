@@ -646,7 +646,7 @@ CGTN阿语,http://news.cgtn.com/resource/live/arabic/cgtn-a.m3u8
 有线财经资讯,http://61.10.2.146/live_freedirect/freehd208_h.live/playlist.m3u8
 有线财经资讯,http://61.10.2.145/live_freedirect/freehd208_h.live/chunklist.m3u8
 有线直播,http://61.10.2.145/live_freedirect/hd110_h.live/chunklist.m3u8
-星空卫视,http://xstartx.com:4000/udp/239.93.0.156:2193
+星空卫视,http://210.210.155.37/x6bnqe/s/s94/index2.m3u8
 星空卫视,http://xstartx.com:4000/udp/239.93.1.10:2193
 CHANNEL-V,http://xstartx.com:4000/udp/239.93.0.157:2194
 CHANNEL-V,http://xstartx.com:4000/udp/239.93.1.7:2194
@@ -654,6 +654,7 @@ J2,http://r.jdshipin.com/Nr5jq
 J2,http://r.jdshipin.com/ndGgS
 TVBRICS,http://brics.bonus-tv.ru/cdn/brics/chinese/tracks-v1a1/index.m3u8
 TVB翡翠,http://r.jdshipin.com/n90gt
+TVB翡翠,http://r.jdshipin.com/qClQf
 ViuTV,http://r.jdshipin.com/vSJvl
 澳亚卫视,https://live.mastvnet.com/lsdream/lY44pmm/2000/live.m3u8
 澳门莲花,http://anren.live/HK/BiIOU11uLA.m3u8
